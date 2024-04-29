@@ -1,0 +1,254 @@
+{
+  "clients": [
+    {
+      "id": "7567",
+      "registrationNumber_1": "AA2345Nh",
+      "carModel_1": "Volvo",
+      "tire_1": {
+        "width": "165",
+        "height": "45",
+        "radius": "15"
+      },
+      "tire_2": {
+        "width": "195",
+        "height": "35",
+        "radius": "14"
+      },
+      "registrationNumber_2": "AT7898NM",
+      "carModel_2": "Mazda 3",
+      "phone_1": "0957800055",
+      "phone_2": "0678903445",
+      "phone_3": "09433434",
+      "name": "Роман",
+      "tiresValue": "3",
+      "tiresValue_2": "3",
+      "tiersIssueYears": "2018",
+      "dataStorage": "2024-04-23",
+      "character": 4,
+      "carFlaws": "ржаві гайки та погані колеса",
+      "tireFlawStore": "латки",
+      "tireBrend": "Priellt",
+      "tireStorage": {
+        "width": "155",
+        "height": "35",
+        "radius": "14"
+      },
+      "tireStorage_2": {
+        "width": "165",
+        "height": "30",
+        "radius": "13"
+      },
+      "serviceCar_1": [
+        "зняття/балансування",
+        "перобувка 4-х коліс",
+        "Run Flat",
+        "MT/AT"
+      ],
+      "serviceCar_2": [
+        "перобувка 4-х коліс",
+        "зняття/балансування",
+        "додаткові б/г",
+        "MT/AT"
+      ]
+    },
+    {
+      "id": "6089",
+      "registrationNumber_1": "AA2345Nh",
+      "carModel_1": "Тесла",
+      "tire_1": {
+        "width": "165",
+        "height": "40",
+        "radius": "15"
+      },
+      "tire_2": {
+        "width": "155",
+        "height": "30",
+        "radius": "15"
+      },
+      "registrationNumber_2": "AN7690",
+      "carModel_2": "Opel",
+      "phone_1": "0957800055",
+      "phone_2": "",
+      "phone_3": "",
+      "name": "Roman",
+      "tiresValue": "2",
+      "tiresValue_2": "2",
+      "tiersIssueYears": "2018",
+      "dataStorage": "2024-04-26",
+      "character": 3,
+      "carFlaws": "",
+      "tireFlawStore": "lkjlkjlasdjalskjdlakjlkjlkj",
+      "tireBrend": "Yokohama-2, Pirelli-3",
+      "tireStorage": {
+        "width": "155",
+        "height": "30",
+        "radius": "14"
+      },
+      "tireStorage_2": {
+        "width": "165",
+        "height": "35",
+        "radius": "15"
+      },
+      "serviceCar_1": [
+        "зняття/балансування"
+      ],
+      "serviceCar_2": [
+        "зняття/балансування"
+      ]
+    },
+    {
+      "id": "b7a1",
+      "registrationNumber_1": "AA2345Nh",
+      "carModel_1": "Тесла",
+      "tire_1": {
+        "width": "165",
+        "height": "40",
+        "radius": "15"
+      },
+      "tire_2": {
+        "width": "155",
+        "height": "30",
+        "radius": "15"
+      },
+      "registrationNumber_2": "AN7690",
+      "carModel_2": "Opel",
+      "phone_1": "0957800055",
+      "phone_2": "",
+      "phone_3": "",
+      "name": "Roman",
+      "tiresValue": "2",
+      "tiresValue_2": "2",
+      "tiersIssueYears": "2018",
+      "dataStorage": "",
+      "character": 3,
+      "carFlaws": "",
+      "tireFlawStore": "",
+      "tireBrend": "Yokohama-2, Pirelli-3",
+      "tireStorage": {
+        "width": "155",
+        "height": "30",
+        "radius": "14"
+      },
+      "tireStorage_2": {
+        "width": "165",
+        "height": "35",
+        "radius": "15"
+      },
+      "serviceCar_1": [
+        "зняття/балансування"
+      ],
+      "serviceCar_2": [
+        "зняття/балансування"
+      ]
+    },
+    {
+      "id": "723c",
+      "registrationNumber_1": "SD2345",
+      "carModel_1": "Тесла",
+      "tire_1": {
+        "width": "205",
+        "height": "30",
+        "radius": "18"
+      },
+      "tire_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "registrationNumber_2": "",
+      "carModel_2": "",
+      "phone_1": "09433434",
+      "phone_2": "0678903445",
+      "phone_3": "",
+      "name": " Наташа",
+      "tiresValue": "4",
+      "tiresValue_2": "4",
+      "tiersIssueYears": "2019",
+      "dataStorage": "2024-04-22",
+      "character": 6,
+      "carFlaws": "ржаві гайки та погані колеса",
+      "tireFlawStore": "",
+      "tireBrend": "Yokohama",
+      "tireStorage": {
+        "width": "165",
+        "height": "30",
+        "radius": "14"
+      },
+      "tireStorage_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "serviceCar_1": [
+        "перобувка 4-х коліс",
+        "зняття/балансування"
+      ],
+      "serviceCar_2": []
+    },
+    {
+      "id": "5ea7",
+      "registrationNumber_1": "AM7856BM",
+      "carModel_1": "Mersedes-Benz",
+      "tire_1": {
+        "width": "155",
+        "height": "35",
+        "radius": "15"
+      },
+      "tire_2": {
+        "width": "175",
+        "height": "40",
+        "radius": "16"
+      },
+      "registrationNumber_2": "AT7898NM",
+      "carModel_2": "Mersedes-Benz",
+      "phone_1": "0957800055",
+      "phone_2": "",
+      "phone_3": "",
+      "name": "Convers",
+      "tiresValue": "",
+      "tiresValue_2": "",
+      "tiersIssueYears": "",
+      "dataStorage": "",
+      "character": 2,
+      "carFlaws": "ржаві гайки та погані колеса",
+      "tireFlawStore": "",
+      "tireBrend": "",
+      "tireStorage": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "tireStorage_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "serviceCar_1": [
+        "Run Flat",
+        "зняття/балансування"
+      ],
+      "serviceCar_2": [
+        "зняття/балансування"
+      ]
+    }
+  ],
+  "selectAction": [
+    {
+      "character": [
+        "норм",
+        "не дуже",
+        "рреДиска"
+      ],
+      "carFlaws": [
+        "ржаві гайки",
+        "корито",
+        "нема колес"
+      ],
+      "whellStor": [
+        "не здав",
+        "здав"
+      ],
+      "id": "40dc"
+    }
+  ]
+}
