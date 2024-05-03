@@ -36,7 +36,7 @@ export const addClient = createAsyncThunk<CLientI, CLientI>('add/client', async 
 export const removeClient = createAsyncThunk<CLientI, string>('remove/client', async (id: string, thunkAPI) => {
 	console.log(id);
 	try {
-		const response = await axios.delete(`/clients/${id}`);
+		const response = await axios.delete(`/clientsі/${id}`);
 
 		return response.data;
 	} catch (error) {
@@ -52,7 +52,7 @@ export const findByIdClient = createAsyncThunk<CLientI, string>('findById/client
 	
 	try {
 		const response = await axios.get(`/clients/${id}`);
-		console.log(response.data);
+		
 		return response.data;
 	} catch (error) {
 		if(error instanceof Error){
@@ -73,6 +73,21 @@ export const searchClient = createAsyncThunk('search/client', async (query: stri
 		if(error instanceof Error){
 			console.log(error);
 			return thunkAPI.rejectWithValue('rejectedRemove');
+		}
+		
+	}
+})
+
+export const updateClient = createAsyncThunk<CLientI, CLientI>('updateClient/client', async (data, thunkAPI) => {
+	console.log("UPDATE", data)
+	try {
+		const response = await axios.put(`/clients/${data.id}`, data);
+		console.log(response.status);
+		return response.data;
+	} catch (error) {
+		if(error instanceof Error){
+			console.log(error);
+			return thunkAPI.rejectWithValue('rejectedUpdate');
 		}
 		
 	}

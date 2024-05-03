@@ -2,6 +2,7 @@ import { FC } from "react";
 import {MdOutlineClose} from 'react-icons/md';
 import { useAppSelector } from "../../hooks/reduxHooks";
 import StarRating from "../StarRating/StarRating";
+import { LiaAwardSolid } from "react-icons/lia";
 
 interface ClientCardlProp {
 	isOpen: boolean
@@ -16,8 +17,8 @@ const clientInfo = useAppSelector(state => state.clientReducer.current);
 	return (
 		<div className={`
 		${isOpen ? "scale-1" : "scale-0"}
-		${clientInfo?.carModel_2 ? "max-w-[900px]" : "max-w-[800px]"}
-		relative bg-slate-500 p-[30px] max-w-[800px] w-[100%] rounded-md transition-all duration-500 ease-in-out`}>
+		${clientInfo?.carModel_2 ? "max-w-[900px]" : "max-w-[700px]"}
+		relative bg-slate-500 pt-[30px] pl-[30px] pr-[30px] w-[100%] rounded-md transition-scale duration-300 ease-in-out`}>
 		<button className='absolute top-0 right-0 z-50 m-4' 
 			onClick={handelModalClose}>
 			<MdOutlineClose className='fill-orange-500 hover:fill-orange-400 transition:fill duration-300' 
@@ -25,7 +26,7 @@ const clientInfo = useAppSelector(state => state.clientReducer.current);
 		</button>
 			<div className='text-white'>
 				<div>
-					<h3 className='text-[20px] border-b-[1px] border-gray-400 mb-[10px] pb-2 text-orange-300 font-semibold'>Картка кліента</h3>
+					<h3 className='text-[20px] border-b-[1px] border-gray-400 mb-[10px] pb-2 text-orange-300 font-semibold'>Картка клієнта</h3>
 				<div className='flex mb-3'>
 				{/* ----------------------------------------Car_One------------------------------------------*/}
 				<div className={`
@@ -116,10 +117,13 @@ const clientInfo = useAppSelector(state => state.clientReducer.current);
 				<div className='mb-2'>
 				<h3 className='text-center text-[20px] border-b-[1px] border-gray-400 mb-[10px] pb-2'>Загальна інформація</h3>
 					<div className='flex'>
-				<div className='w-1/2'>
+				<div className='w-1/2 relative'>
 				<label className='block mb-2 mr-5 border-b-[1px] border-gray-300 border-opacity-10'>
 					<span className='block'>Ім'я</span>
 					<p className='rounded-md text-black text-[18px] font-semibold'>{clientInfo?.name}</p>
+					{clientInfo?.discount && <div>
+					<LiaAwardSolid className="absolute top-0 right-[20px]" size={80} color="orange"/>
+					<p className="absolute top-[20px] right-[44px] font-semibold">{clientInfo?.discount}<span className="text-[10px]">%</span></p></div>}
 				</label>
 				<label className='block mr-5 mb-2 border-b-[1px] border-gray-300 border-opacity-10'>
 					<span className='block'>Як людина</span>
@@ -148,11 +152,11 @@ const clientInfo = useAppSelector(state => state.clientReducer.current);
 					</div>
 				</div>
 
-				{/* ---------------------------------Колеса під реалізацію-------------------------*/}
+				{/* ---------------------------------Колеса під збнрігання-------------------------*/}
 				<div className='mb-[20px]'>
-				<h3 className='text-center text-[20px] border-b-[1px] border-gray-400 mb-[10px] pb-2 '>Колеса під реалізацію</h3>
-				{clientInfo?.dataStorage ? (<div className='flex bg-slate-800 bg-opacity-50 rounded-md p-3'>
-					<div className='w-1/2'>
+				<h3 className='text-center text-[20px] border-b-[1px] border-gray-400 mb-[10px] pb-2 '>Колеса під зберігання</h3>
+				{clientInfo?.dataStorage ? (<div className='flex bg-slate-800 bg-opacity-50 rounded-md p-5'>
+					<div className='w-[60%]'>
 
 			
 			<div className='flex border-b-[1px] border-gray-300 border-opacity-10 mr-5'>
@@ -204,7 +208,7 @@ const clientInfo = useAppSelector(state => state.clientReducer.current);
 					</div>
 						</label>}
 					</div>
-				</div>) : (<div className='bg-slate-800 bg-opacity-40 rounded-md pl-3 pt-2 pb-2'><p className="text-center text-xl text-black font-semibold">Колес під реалізацію немає</p></div>)}
+				</div>) : (<div className='bg-slate-800 bg-opacity-40 rounded-md pl-3 pt-2 pb-2'><p className="text-center text-xl text-black font-semibold">{clientInfo?.endDataStorage ? `Видані ${clientInfo.endDataStorage}` : "Колеса під зберігання немає"}</p></div>)}
 				</div>
 			
 			</div>

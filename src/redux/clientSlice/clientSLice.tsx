@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { addClient, fetchAllClients, findByIdClient, removeClient, searchClient } from "../operations";
+import { addClient, fetchAllClients, findByIdClient, removeClient, searchClient, updateClient } from "../operations";
 import { CLientI } from "../../types/types";
 
 
@@ -18,27 +18,28 @@ const initialState: ClientState = {
 	isLoading: false,
 	error: null,
 	filtered: [],
-	query: '',
+	
 }
 
 export const clientSLice = createSlice ({
 	name:"clients",
 	initialState,
 	reducers:{
-		clienFilter(state, actions) {
-			state.filtered = state.clients.filter(item => 
-				item.registrationNumber_1.includes(actions.payload) || 
-				item.registrationNumber_2.includes(actions.payload) ||
-				item.phone_1.includes(actions.payload) ||
-				item.phone_2.includes(actions.payload) ||
-				item.phone_3.includes(actions.payload) ||
-				item.carModel_1.includes(actions.payload) ||
-				item.carModel_2.includes(actions.payload)
-				)
-		},
-		setQuery(state, action) {
-			state.query = action.payload;
-		}
+		// clienFilter(state, actions) {
+		// 	const filter = actions.payload;
+		// 	console.log(filter);
+		// 	state.clients = state.clients.filter(item => 
+		// 		item.registrationNumber_1.includes(filter) || 
+		// 		item.registrationNumber_2.includes(filter) ||
+		// 		item.phone_1.includes(filter) ||
+		// 		item.phone_2.includes(filter) ||
+		// 		item.phone_3.includes(filter) ||
+		// 		item.carModel_1.includes(filter) ||
+		// 		item.carModel_2.includes(filter)
+		// 		)
+		// },
+	
+
 	},
 	extraReducers:(bulider) => {
 		bulider
@@ -66,8 +67,9 @@ export const clientSLice = createSlice ({
 		.addCase(addClient.fulfilled, (state, actions) => {
 			console.log("act", actions.payload);
 			state.isLoading = false;
-			state.clients = [...state.clients, actions.payload];
 			state.error = null;
+			state.clients = [...state.clients, actions.payload];
+	
 		})
 		.addCase(addClient.rejected, (state, actions) => {
 			state.isLoading = false;
@@ -82,8 +84,11 @@ export const clientSLice = createSlice ({
 		})
 		.addCase(removeClient.fulfilled, (state, actions) => {
 			state.isLoading = false;
-			state.clients = state.clients.filter(item => item.id !== actions.payload.id);
-			state.error = null;
+		
+				state.clients = state.clients.filter(item => item.id !== actions.payload.id);
+			
+			// state.filtered = state.clients.filter(item => item.id !== actions.payload.id);
+			// state.error = null;
 		})
 		.addCase(removeClient.rejected, (state, actions) => {
 			state.isLoading = false;
@@ -107,21 +112,43 @@ export const clientSLice = createSlice ({
 				state.error = actions.payload;
 			}
 		})
-		//Search
-		.addCase(searchClient.pending, (state) => {
+		//Update
+		.addCase(updateClient.pending, (state) => {
 			state.isLoading = true;
 			state.error = null;
 		})
-		.addCase(searchClient.fulfilled, (state, actions) => {
-			console.log("actSearch", actions.payload);
+		.addCase(updateClient.fulfilled, (state, actions) => {
+			console.log('Update', actions.payload);
 			state.isLoading = false;
-			state.filtered = actions.payload
+			state.clients = state.clients.map(item => {
+				if(item.id === actions.payload.id){
+					return actions.payload;
+				}
+				return item;
+			})
 			state.error = null;
 		})
+		.addCase(updateClient.rejected, (state, actions) => {
+			state.isLoading = false;
+			if(typeof actions.payload === "string"){
+				state.error = actions.payload;
+			}
+		})
+		//Search
+		// .addCase(searchClient.pending, (state) => {
+		// 	state.isLoading = true;
+		// 	state.error = null;
+		// })
+		// .addCase(searchClient.fulfilled, (state, actions) => {
+		// 	console.log("actSearch", actions.payload);
+		// 	state.isLoading = false;
+		// 	state.filtered = actions.payload
+		// 	state.error = null;
+		// })
 		
 	}
 
 })
 
-export const {clienFilter, setQuery} = clientSLice.actions
+export const {clienFilter, resetFilter} = clientSLice.actions
 export default clientSLice.reducer;

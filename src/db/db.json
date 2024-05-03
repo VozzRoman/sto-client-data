@@ -1,154 +1,63 @@
 {
   "clients": [
     {
-      "id": "7567",
-      "registrationNumber_1": "AA2345Nh",
-      "carModel_1": "Volvo",
+      "registrationNumber_1": "TR5678FF",
+      "carModel_1": "Mazda",
       "tire_1": {
-        "width": "165",
-        "height": "45",
-        "radius": "15"
+        "width": "175",
+        "height": "50",
+        "radius": "16"
       },
       "tire_2": {
-        "width": "195",
+        "width": "155",
         "height": "35",
-        "radius": "14"
+        "radius": "15"
       },
-      "registrationNumber_2": "AT7898NM",
-      "carModel_2": "Mazda 3",
-      "phone_1": "0957800055",
-      "phone_2": "0678903445",
-      "phone_3": "09433434",
-      "name": "Роман",
+      "registrationNumber_2": "FF7777RR",
+      "carModel_2": "Gaz",
+      "phone_1": "+38 (934) 569-09-00",
+      "phone_2": "+38 (987) 678-00-00",
+      "phone_3": "",
+      "name": "Беня2",
+      "discount": "30",
       "tiresValue": "3",
       "tiresValue_2": "3",
-      "tiersIssueYears": "2018",
-      "dataStorage": "2024-04-23",
-      "character": 4,
-      "carFlaws": "ржаві гайки та погані колеса",
-      "tireFlawStore": "латки",
-      "tireBrend": "Priellt",
-      "tireStorage": {
-        "width": "155",
-        "height": "35",
-        "radius": "14"
-      },
-      "tireStorage_2": {
-        "width": "165",
-        "height": "30",
-        "radius": "13"
-      },
-      "serviceCar_1": [
-        "зняття/балансування",
-        "перобувка 4-х коліс",
-        "Run Flat",
-        "MT/AT"
-      ],
-      "serviceCar_2": [
-        "перобувка 4-х коліс",
-        "зняття/балансування",
-        "додаткові б/г",
-        "MT/AT"
-      ]
-    },
-    {
-      "id": "6089",
-      "registrationNumber_1": "AA2345Nh",
-      "carModel_1": "Тесла",
-      "tire_1": {
-        "width": "165",
-        "height": "40",
-        "radius": "15"
-      },
-      "tire_2": {
-        "width": "155",
-        "height": "30",
-        "radius": "15"
-      },
-      "registrationNumber_2": "AN7690",
-      "carModel_2": "Opel",
-      "phone_1": "0957800055",
-      "phone_2": "",
-      "phone_3": "",
-      "name": "Roman",
-      "tiresValue": "2",
-      "tiresValue_2": "2",
-      "tiersIssueYears": "2018",
-      "dataStorage": "2024-04-26",
-      "character": 3,
-      "carFlaws": "",
-      "tireFlawStore": "lkjlkjlasdjalskjdlakjlkjlkj",
-      "tireBrend": "Yokohama-2, Pirelli-3",
-      "tireStorage": {
-        "width": "155",
-        "height": "30",
-        "radius": "14"
-      },
-      "tireStorage_2": {
-        "width": "165",
-        "height": "35",
-        "radius": "15"
-      },
-      "serviceCar_1": [
-        "зняття/балансування"
-      ],
-      "serviceCar_2": [
-        "зняття/балансування"
-      ]
-    },
-    {
-      "id": "b7a1",
-      "registrationNumber_1": "AA2345Nh",
-      "carModel_1": "Тесла",
-      "tire_1": {
-        "width": "165",
-        "height": "40",
-        "radius": "15"
-      },
-      "tire_2": {
-        "width": "155",
-        "height": "30",
-        "radius": "15"
-      },
-      "registrationNumber_2": "AN7690",
-      "carModel_2": "Opel",
-      "phone_1": "0957800055",
-      "phone_2": "",
-      "phone_3": "",
-      "name": "Roman",
-      "tiresValue": "2",
-      "tiresValue_2": "2",
-      "tiersIssueYears": "2018",
-      "dataStorage": "",
-      "character": 3,
-      "carFlaws": "",
+      "tiersIssueYears": "2019",
+      "dataStorage": "2024-05-15",
+      "endDataStorage": "",
+      "character": "2",
+      "carFlaws": "шось там погане!!!!",
       "tireFlawStore": "",
-      "tireBrend": "Yokohama-2, Pirelli-3",
+      "tireBrend": "Yokohama",
       "tireStorage": {
-        "width": "155",
-        "height": "30",
+        "width": "145",
+        "height": "25",
         "radius": "14"
       },
       "tireStorage_2": {
-        "width": "165",
-        "height": "35",
-        "radius": "15"
+        "width": "",
+        "height": "",
+        "radius": ""
       },
       "serviceCar_1": [
-        "зняття/балансування"
+        "додаткові б/г",
+        "зняття/балансування",
+        "перобувка 4-х коліс",
+        "MT/AT"
       ],
       "serviceCar_2": [
-        "зняття/балансування"
-      ]
+        "Run Flat",
+        "перобувка 4-х коліс"
+      ],
+      "id": "7f43"
     },
     {
-      "id": "723c",
-      "registrationNumber_1": "SD2345",
-      "carModel_1": "Тесла",
+      "registrationNumber_1": "АТ45777КИ",
+      "carModel_1": "Toyota Camry",
       "tire_1": {
-        "width": "205",
-        "height": "30",
-        "radius": "18"
+        "width": "175",
+        "height": "40",
+        "radius": "14"
       },
       "tire_2": {
         "width": "",
@@ -157,22 +66,24 @@
       },
       "registrationNumber_2": "",
       "carModel_2": "",
-      "phone_1": "09433434",
-      "phone_2": "0678903445",
+      "phone_1": "+38 (097) 778-76-76",
+      "phone_2": "",
       "phone_3": "",
       "name": " Наташа",
+      "discount": "10",
       "tiresValue": "4",
       "tiresValue_2": "4",
-      "tiersIssueYears": "2019",
-      "dataStorage": "2024-04-22",
-      "character": 6,
+      "tiersIssueYears": "2014",
+      "dataStorage": "",
+      "endDataStorage": "",
+      "character": 4,
       "carFlaws": "ржаві гайки та погані колеса",
       "tireFlawStore": "",
       "tireBrend": "Yokohama",
       "tireStorage": {
-        "width": "165",
-        "height": "30",
-        "radius": "14"
+        "width": "185",
+        "height": "40",
+        "radius": "15"
       },
       "tireStorage_2": {
         "width": "",
@@ -181,36 +92,87 @@
       },
       "serviceCar_1": [
         "перобувка 4-х коліс",
-        "зняття/балансування"
+        "додаткові б/г"
       ],
-      "serviceCar_2": []
+      "serviceCar_2": [],
+      "id": "fdeb"
     },
     {
-      "id": "5ea7",
-      "registrationNumber_1": "AM7856BM",
-      "carModel_1": "Mersedes-Benz",
+      "registrationNumber_1": "AA4578RR",
+      "carModel_1": "Ford2",
       "tire_1": {
         "width": "155",
         "height": "35",
-        "radius": "15"
+        "radius": "14"
       },
       "tire_2": {
-        "width": "175",
-        "height": "40",
-        "radius": "16"
+        "width": "155",
+        "height": "30",
+        "radius": "14"
       },
-      "registrationNumber_2": "AT7898NM",
-      "carModel_2": "Mersedes-Benz",
-      "phone_1": "0957800055",
-      "phone_2": "",
-      "phone_3": "",
-      "name": "Convers",
+      "registrationNumber_2": "CV7789FG",
+      "carModel_2": "Mazda 3",
+      "phone_1": "+38 (097) 778-76-76",
+      "phone_2": "+38 (456) 799-80-90",
+      "phone_3": "+38 (908) 900-09-89",
+      "name": "Толик",
+      "discount": "10",
       "tiresValue": "",
       "tiresValue_2": "",
       "tiersIssueYears": "",
       "dataStorage": "",
-      "character": 2,
-      "carFlaws": "ржаві гайки та погані колеса",
+      "endDataStorage": "",
+      "character": 3,
+      "carFlaws": "шось там погане!!!!",
+      "tireFlawStore": "латки",
+      "tireBrend": "",
+      "tireStorage": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "tireStorage_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "serviceCar_1": [
+        "додаткові б/г",
+        "зняття/балансування"
+      ],
+      "serviceCar_2": [
+        "зняття/балансування",
+        "додаткові б/г"
+      ],
+      "id": "d8dc"
+    },
+    {
+      "registrationNumber_1": " AD4567NM",
+      "carModel_1": "Тесла Y",
+      "tire_1": {
+        "width": "255",
+        "height": "60",
+        "radius": "16"
+      },
+      "tire_2": {
+        "width": "145",
+        "height": "30",
+        "radius": "15"
+      },
+      "registrationNumber_2": "CV7789FG",
+      "carModel_2": "Opel",
+      "phone_1": "+38 (097) 778-76-76",
+      "phone_2": "",
+      "phone_3": "",
+      "name": "Женя",
+      "discount": "",
+      "tiresValue": "",
+      "tiresValue_2": "",
+      "tiersIssueYears": "",
+      "dataStorage": "",
+      "endDataStorage": "",
+      "character": 3,
+      "carFlaws": "",
       "tireFlawStore": "",
       "tireBrend": "",
       "tireStorage": {
@@ -224,12 +186,973 @@
         "radius": ""
       },
       "serviceCar_1": [
+        "перобувка 4-х коліс",
         "Run Flat",
         "зняття/балансування"
       ],
       "serviceCar_2": [
+        "перобувка 4-х коліс",
+        "зняття/балансування",
+        "Run Flat"
+      ],
+      "id": "c3d0"
+    },
+    {
+      "registrationNumber_1": "AE5690RM",
+      "carModel_1": "WV Golf",
+      "tire_1": {
+        "width": "165",
+        "height": "35",
+        "radius": "15"
+      },
+      "tire_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "registrationNumber_2": "",
+      "carModel_2": "",
+      "phone_1": "+38 (934) 679-99-10",
+      "phone_2": "",
+      "phone_3": "",
+      "name": "Толя",
+      "discount": "",
+      "tiresValue": "",
+      "tiresValue_2": "",
+      "tiersIssueYears": "",
+      "dataStorage": "",
+      "endDataStorage": "",
+      "character": 4,
+      "carFlaws": "",
+      "tireFlawStore": "",
+      "tireBrend": "",
+      "tireStorage": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "tireStorage_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "serviceCar_1": [
+        "додаткові б/г"
+      ],
+      "serviceCar_2": [],
+      "id": "580c"
+    },
+    {
+      "id": "9cd1",
+      "registrationNumber_1": "AA5690NM",
+      "carModel_1": "Mustang",
+      "tire_1": {
+        "width": "145",
+        "height": "30",
+        "radius": "15"
+      },
+      "tire_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "registrationNumber_2": "",
+      "carModel_2": "",
+      "phone_1": "+38 (890) 590-99-80",
+      "phone_2": "",
+      "phone_3": "",
+      "name": "Толя",
+      "discount": "10",
+      "tiresValue": "",
+      "tiresValue_2": "",
+      "tiersIssueYears": "",
+      "dataStorage": "",
+      "endDataStorage": "",
+      "character": 4,
+      "carFlaws": "",
+      "tireFlawStore": "",
+      "tireBrend": "",
+      "tireStorage": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "tireStorage_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "serviceCar_1": [
         "зняття/балансування"
+      ],
+      "serviceCar_2": []
+    },
+    {
+      "id": "f5b3",
+      "registrationNumber_1": "AA6680MM",
+      "carModel_1": "Porsh Panamero",
+      "tire_1": {
+        "width": "175",
+        "height": "35",
+        "radius": "15"
+      },
+      "tire_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "registrationNumber_2": "",
+      "carModel_2": "",
+      "phone_1": "+38 (934) 569-09-00",
+      "phone_2": "",
+      "phone_3": "",
+      "name": "Толя",
+      "discount": "",
+      "tiresValue": "",
+      "tiresValue_2": "",
+      "tiersIssueYears": "",
+      "dataStorage": "",
+      "endDataStorage": "",
+      "character": 10,
+      "carFlaws": "",
+      "tireFlawStore": "",
+      "tireBrend": "",
+      "tireStorage": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "tireStorage_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "serviceCar_1": [
+        "зняття/балансування"
+      ],
+      "serviceCar_2": []
+    },
+    {
+      "id": "5ccf",
+      "registrationNumber_1": "WE7689QW",
+      "carModel_1": "BMW",
+      "tire_1": {
+        "width": "165",
+        "height": "35",
+        "radius": "15"
+      },
+      "tire_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "registrationNumber_2": "",
+      "carModel_2": "",
+      "phone_1": "+38 (097) 778-76-76",
+      "phone_2": "",
+      "phone_3": "",
+      "name": " Наташа",
+      "discount": "10",
+      "tiresValue": "",
+      "tiresValue_2": "",
+      "tiersIssueYears": "",
+      "dataStorage": "",
+      "endDataStorage": "",
+      "character": 4,
+      "carFlaws": "",
+      "tireFlawStore": "",
+      "tireBrend": "",
+      "tireStorage": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "tireStorage_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "serviceCar_1": [
+        "зняття/балансування"
+      ],
+      "serviceCar_2": []
+    },
+    {
+      "registrationNumber_1": "AM7856BM",
+      "carModel_1": "Volvo2",
+      "tire_1": {
+        "width": "185",
+        "height": "35",
+        "radius": "14"
+      },
+      "tire_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "registrationNumber_2": "",
+      "carModel_2": "",
+      "phone_1": "+38 (097) 778-76-76",
+      "phone_2": "",
+      "phone_3": "",
+      "name": "Боров",
+      "discount": "10",
+      "tiresValue": "",
+      "tiresValue_2": "",
+      "tiersIssueYears": "",
+      "dataStorage": "",
+      "endDataStorage": "",
+      "character": 4,
+      "carFlaws": "шось там погане!!!!",
+      "tireFlawStore": "",
+      "tireBrend": "",
+      "tireStorage": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "tireStorage_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "serviceCar_1": [
+        "додаткові б/г"
+      ],
+      "serviceCar_2": [],
+      "id": "fdf2"
+    },
+    {
+      "id": "f8f0",
+      "registrationNumber_1": "AA5678NM",
+      "carModel_1": "Volvo",
+      "tire_1": {
+        "width": "175",
+        "height": "35",
+        "radius": "15"
+      },
+      "tire_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "registrationNumber_2": "",
+      "carModel_2": "",
+      "phone_1": "+38 (097) 778-76-76",
+      "phone_2": "",
+      "phone_3": "",
+      "name": " Наташа",
+      "discount": "10",
+      "tiresValue": "",
+      "tiresValue_2": "",
+      "tiersIssueYears": "",
+      "dataStorage": "",
+      "endDataStorage": "",
+      "character": "4",
+      "carFlaws": "",
+      "tireFlawStore": "",
+      "tireBrend": "",
+      "tireStorage": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "tireStorage_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "serviceCar_1": [
+        "перобувка 4-х коліс",
+        ""
+      ],
+      "serviceCar_2": []
+    },
+    {
+      "id": "6a8e",
+      "registrationNumber_1": "test1",
+      "carModel_1": "test1",
+      "tire_1": {
+        "width": "155",
+        "height": "30",
+        "radius": "14"
+      },
+      "tire_2": {
+        "width": "145",
+        "height": "30",
+        "radius": "13"
+      },
+      "registrationNumber_2": "test1",
+      "carModel_2": "test1",
+      "phone_1": "+38 (934) 569-09-00",
+      "phone_2": "+38 (987) 678-00-00",
+      "phone_3": "+38 (908) 900-09-89",
+      "name": "Роман Вознюк",
+      "discount": "30",
+      "tiresValue": "3",
+      "tiresValue_2": "3",
+      "tiersIssueYears": "2018",
+      "dataStorage": "2024-05-15",
+      "endDataStorage": "",
+      "character": "3",
+      "carFlaws": "ржаві гайки та погані колеса",
+      "tireFlawStore": "латки sdfsdfsdfsdfsd sdfsdfsdfsd sdfsdfsdf sdsdfsdf sdsdfsdf",
+      "tireBrend": "Pirreli",
+      "tireStorage": {
+        "width": "145",
+        "height": "35",
+        "radius": "14"
+      },
+      "tireStorage_2": {
+        "width": "145",
+        "height": "25",
+        "radius": "13"
+      },
+      "serviceCar_1": [
+        "перобувка 4-х коліс"
+      ],
+      "serviceCar_2": [
+        "перобувка 4-х коліс"
       ]
+    },
+    {
+      "id": "bfb7",
+      "registrationNumber_1": "test2",
+      "carModel_1": "test2",
+      "tire_1": {
+        "width": "155",
+        "height": "30",
+        "radius": "14"
+      },
+      "tire_2": {
+        "width": "145",
+        "height": "30",
+        "radius": "13"
+      },
+      "registrationNumber_2": "test2",
+      "carModel_2": "test2",
+      "phone_1": "+38 (934) 569-09-00",
+      "phone_2": "",
+      "phone_3": "",
+      "name": "test2",
+      "discount": "10",
+      "tiresValue": "",
+      "tiresValue_2": "",
+      "tiersIssueYears": "",
+      "dataStorage": "",
+      "endDataStorage": "",
+      "character": "4",
+      "carFlaws": "",
+      "tireFlawStore": "",
+      "tireBrend": "",
+      "tireStorage": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "tireStorage_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "serviceCar_1": [
+        "перобувка 4-х коліс",
+        ""
+      ],
+      "serviceCar_2": []
+    },
+    {
+      "id": "e65e",
+      "registrationNumber_1": "test2",
+      "carModel_1": "test2",
+      "tire_1": {
+        "width": "165",
+        "height": "35",
+        "radius": "14"
+      },
+      "tire_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "registrationNumber_2": "",
+      "carModel_2": "",
+      "phone_1": "+38 (934) 569-09-00",
+      "phone_2": "",
+      "phone_3": "",
+      "name": "test2",
+      "discount": "10",
+      "tiresValue": "",
+      "tiresValue_2": "",
+      "tiersIssueYears": "",
+      "dataStorage": "",
+      "endDataStorage": "",
+      "character": "4",
+      "carFlaws": "",
+      "tireFlawStore": "",
+      "tireBrend": "",
+      "tireStorage": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "tireStorage_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "serviceCar_1": [
+        "перобувка 4-х коліс"
+      ],
+      "serviceCar_2": []
+    },
+    {
+      "id": "e65e89",
+      "registrationNumber_1": "test2",
+      "carModel_1": "test2",
+      "tire_1": {
+        "width": "165",
+        "height": "35",
+        "radius": "14"
+      },
+      "tire_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "registrationNumber_2": "",
+      "carModel_2": "",
+      "phone_1": "+38 (934) 569-09-00",
+      "phone_2": "",
+      "phone_3": "",
+      "name": "test2",
+      "discount": "10",
+      "tiresValue": "",
+      "tiresValue_2": "",
+      "tiersIssueYears": "",
+      "dataStorage": "",
+      "endDataStorage": "",
+      "character": "4",
+      "carFlaws": "",
+      "tireFlawStore": "",
+      "tireBrend": "",
+      "tireStorage": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "tireStorage_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "serviceCar_1": [
+        "перобувка 4-х коліс"
+      ],
+      "serviceCar_2": []
+    },
+    {
+      "registrationNumber_1": "test2",
+      "carModel_1": "test22",
+      "tire_1": {
+        "width": "165",
+        "height": "35",
+        "radius": "14"
+      },
+      "tire_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "registrationNumber_2": "",
+      "carModel_2": "",
+      "phone_1": "+38 (934) 569-09-00",
+      "phone_2": "",
+      "phone_3": "",
+      "name": "test2",
+      "discount": "10",
+      "tiresValue": "",
+      "tiresValue_2": "",
+      "tiersIssueYears": "",
+      "dataStorage": "",
+      "endDataStorage": "",
+      "character": "4",
+      "carFlaws": "",
+      "tireFlawStore": "",
+      "tireBrend": "",
+      "tireStorage": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "tireStorage_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "serviceCar_1": [
+        "перобувка 4-х коліс"
+      ],
+      "serviceCar_2": [],
+      "id": "e65e000"
+    },
+    {
+      "id": "e65e123",
+      "registrationNumber_1": "test2",
+      "carModel_1": "test2",
+      "tire_1": {
+        "width": "165",
+        "height": "35",
+        "radius": "14"
+      },
+      "tire_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "registrationNumber_2": "",
+      "carModel_2": "",
+      "phone_1": "+38 (934) 569-09-00",
+      "phone_2": "",
+      "phone_3": "",
+      "name": "test2",
+      "discount": "10",
+      "tiresValue": "",
+      "tiresValue_2": "",
+      "tiersIssueYears": "",
+      "dataStorage": "",
+      "endDataStorage": "",
+      "character": "4",
+      "carFlaws": "",
+      "tireFlawStore": "",
+      "tireBrend": "",
+      "tireStorage": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "tireStorage_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "serviceCar_1": [
+        "перобувка 4-х коліс"
+      ],
+      "serviceCar_2": []
+    },
+    {
+      "id": "123e65e",
+      "registrationNumber_1": "test2",
+      "carModel_1": "test2",
+      "tire_1": {
+        "width": "165",
+        "height": "35",
+        "radius": "14"
+      },
+      "tire_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "registrationNumber_2": "",
+      "carModel_2": "",
+      "phone_1": "+38 (934) 569-09-00",
+      "phone_2": "",
+      "phone_3": "",
+      "name": "test2",
+      "discount": "10",
+      "tiresValue": "",
+      "tiresValue_2": "",
+      "tiersIssueYears": "",
+      "dataStorage": "",
+      "endDataStorage": "",
+      "character": "4",
+      "carFlaws": "",
+      "tireFlawStore": "",
+      "tireBrend": "",
+      "tireStorage": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "tireStorage_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "serviceCar_1": [
+        "перобувка 4-х коліс"
+      ],
+      "serviceCar_2": []
+    },
+    {
+      "id": "e65e000000",
+      "registrationNumber_1": "test2",
+      "carModel_1": "test2",
+      "tire_1": {
+        "width": "165",
+        "height": "35",
+        "radius": "14"
+      },
+      "tire_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "registrationNumber_2": "",
+      "carModel_2": "",
+      "phone_1": "+38 (934) 569-09-00",
+      "phone_2": "",
+      "phone_3": "",
+      "name": "test2",
+      "discount": "10",
+      "tiresValue": "",
+      "tiresValue_2": "",
+      "tiersIssueYears": "",
+      "dataStorage": "",
+      "endDataStorage": "",
+      "character": "4",
+      "carFlaws": "",
+      "tireFlawStore": "",
+      "tireBrend": "",
+      "tireStorage": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "tireStorage_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "serviceCar_1": [
+        "перобувка 4-х коліс"
+      ],
+      "serviceCar_2": []
+    },
+    {
+      "id": "3487",
+      "registrationNumber_1": "GP4576FG",
+      "carModel_1": "Tarants",
+      "tire_1": {
+        "width": "245",
+        "height": "40",
+        "radius": "15"
+      },
+      "tire_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "registrationNumber_2": "",
+      "carModel_2": "",
+      "phone_1": "+38 (934) 569-09-00",
+      "phone_2": "",
+      "phone_3": "",
+      "name": "Шлепик4",
+      "discount": "",
+      "tiresValue": "",
+      "tiresValue_2": "",
+      "tiersIssueYears": "",
+      "dataStorage": "",
+      "endDataStorage": "",
+      "character": "3",
+      "carFlaws": "",
+      "tireFlawStore": "",
+      "tireBrend": "",
+      "tireStorage": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "tireStorage_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "serviceCar_1": [
+        "перобувка 4-х коліс",
+        "зняття/балансування"
+      ],
+      "serviceCar_2": []
+    },
+    {
+      "id": "78e3",
+      "registrationNumber_1": "RY2345FM",
+      "carModel_1": "Ford",
+      "tire_1": {
+        "width": "175",
+        "height": "40",
+        "radius": "16"
+      },
+      "tire_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "registrationNumber_2": "",
+      "carModel_2": "",
+      "phone_1": "+38 (934) 569-09-00",
+      "phone_2": "",
+      "phone_3": "",
+      "name": "Леня",
+      "discount": "",
+      "tiresValue": "",
+      "tiresValue_2": "",
+      "tiersIssueYears": "",
+      "dataStorage": "",
+      "endDataStorage": "",
+      "character": "4",
+      "carFlaws": "",
+      "tireFlawStore": "",
+      "tireBrend": "",
+      "tireStorage": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "tireStorage_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "serviceCar_1": [
+        "перобувка 4-х коліс",
+        "зняття/балансування"
+      ],
+      "serviceCar_2": []
+    },
+    {
+      "id": "f01e",
+      "registrationNumber_1": "КГ9090ИТ",
+      "carModel_1": "Маз Зилович",
+      "tire_1": {
+        "width": "165",
+        "height": "35",
+        "radius": "16"
+      },
+      "tire_2": {
+        "width": "155",
+        "height": "35",
+        "radius": "15"
+      },
+      "registrationNumber_2": "ТР4578УВ",
+      "carModel_2": "Банан Авто",
+      "phone_1": "+38 (096) 878-56-74",
+      "phone_2": "",
+      "phone_3": "",
+      "name": "Антон",
+      "discount": "",
+      "tiresValue": "",
+      "tiresValue_2": "",
+      "tiersIssueYears": "",
+      "dataStorage": "",
+      "endDataStorage": "",
+      "character": "3",
+      "carFlaws": "",
+      "tireFlawStore": "",
+      "tireBrend": "",
+      "tireStorage": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "tireStorage_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "serviceCar_1": [
+        "перобувка 4-х коліс",
+        "зняття/балансування"
+      ],
+      "serviceCar_2": [
+        "зняття/балансування",
+        "додаткові б/г",
+        "MT/AT"
+      ]
+    },
+    {
+      "id": "241b",
+      "registrationNumber_1": "AS1245NM",
+      "carModel_1": "Batmobile",
+      "tire_1": {
+        "width": "325",
+        "height": "85",
+        "radius": "19"
+      },
+      "tire_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "registrationNumber_2": "",
+      "carModel_2": "",
+      "phone_1": "+38 (099) 999-99-99",
+      "phone_2": "",
+      "phone_3": "",
+      "name": "Bruce Whayne",
+      "discount": "20",
+      "tiresValue": "3",
+      "tiresValue_2": "3",
+      "tiersIssueYears": "1945",
+      "dataStorage": "2024-05-07",
+      "endDataStorage": "",
+      "character": "5",
+      "carFlaws": "",
+      "tireFlawStore": "Нормальніе колеса только сочень старіе!!!",
+      "tireBrend": "Bat-Колеса",
+      "tireStorage": {
+        "width": "325",
+        "height": "90",
+        "radius": "16"
+      },
+      "tireStorage_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "serviceCar_1": [
+        "MT/AT",
+        "Run Flat"
+      ],
+      "serviceCar_2": []
+    },
+    {
+      "id": "ab51",
+      "registrationNumber_1": "WE6589NM",
+      "carModel_1": "Ferrari ",
+      "tire_1": {
+        "width": "145",
+        "height": "25",
+        "radius": "13"
+      },
+      "tire_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "registrationNumber_2": "",
+      "carModel_2": "",
+      "phone_1": "+38 (097) 778-76-76",
+      "phone_2": "+38 (987) 678-00-00",
+      "phone_3": "",
+      "name": "Леонардо",
+      "discount": "10",
+      "tiresValue": "3",
+      "tiresValue_2": "",
+      "tiersIssueYears": "2019",
+      "dataStorage": "2024-05-08",
+      "endDataStorage": "",
+      "character": "3",
+      "carFlaws": "",
+      "tireFlawStore": "",
+      "tireBrend": "Matador",
+      "tireStorage": {
+        "width": "155",
+        "height": "30",
+        "radius": "13"
+      },
+      "tireStorage_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "serviceCar_1": [
+        "MT/AT"
+      ],
+      "serviceCar_2": []
+    },
+    {
+      "registrationNumber_1": "АВ4567НО",
+      "carModel_1": "Toyota Avensis",
+      "tire_1": {
+        "width": "225",
+        "height": "35",
+        "radius": "13"
+      },
+      "tire_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "registrationNumber_2": "",
+      "carModel_2": "",
+      "phone_1": "+38 (097) 778-76-76",
+      "phone_2": "",
+      "phone_3": "",
+      "name": "Filya",
+      "discount": "",
+      "tiresValue": "",
+      "tiresValue_2": "",
+      "tiersIssueYears": "",
+      "dataStorage": "",
+      "endDataStorage": "",
+      "character": "4",
+      "carFlaws": "",
+      "tireFlawStore": "",
+      "tireBrend": "",
+      "tireStorage": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "tireStorage_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "serviceCar_1": [
+        "зняття/балансування"
+      ],
+      "serviceCar_2": [],
+      "id": "4a0f"
+    },
+    {
+      "registrationNumber_1": "AA2345Nh",
+      "carModel_1": "Жук",
+      "tire_1": {
+        "width": "175",
+        "height": "30",
+        "radius": "14"
+      },
+      "tire_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "registrationNumber_2": "",
+      "carModel_2": "",
+      "phone_1": "+38 (097) 778-76-76",
+      "phone_2": "",
+      "phone_3": "",
+      "name": "Хосе",
+      "discount": "",
+      "tiresValue": "",
+      "tiresValue_2": "",
+      "tiersIssueYears": "",
+      "dataStorage": "",
+      "endDataStorage": "",
+      "character": "4",
+      "carFlaws": "",
+      "tireFlawStore": "",
+      "tireBrend": "",
+      "tireStorage": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "tireStorage_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "serviceCar_1": [
+        "зняття/балансування"
+      ],
+      "serviceCar_2": [],
+      "id": "b6b7"
     }
   ],
   "selectAction": [
