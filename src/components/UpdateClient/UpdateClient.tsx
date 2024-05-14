@@ -6,7 +6,6 @@ import 'react-datepicker/dist/react-datepicker.css';
 import InputMask from 'react-input-mask';
 import { tireHeight, tireWidth, tireRadius, serviceCar} from '../../selectedData/selectedData';
 import { filteredValue } from '../../redux/filterSlice/filterSlice';
-import { Watch } from 'react-loader-spinner';
 import { InputDataI } from '../../types/types';
 import { MdOutlineClose } from 'react-icons/md';
 import Loader from '../Loader/Loader';
@@ -139,24 +138,40 @@ setInputData(prev => {
 //ServiceCar_1
 const handleServiceData_1 = (e: React.ChangeEvent<HTMLSelectElement>, index: number) => {
 	const selectedService = e.target.value;
+
 	if (!serviceData_1.includes(selectedService)) {
-	  setServiceData_1(prev => {
-		 const updatedData = [...prev];
-		 updatedData[index] = selectedService;
-		 return updatedData;
-	  });
+		setServiceData_1(prev => {
+			const updatedData = [...prev];
+			if (updatedData[index]) {
+				updatedData.splice(index, 1);
+			 }
+			 // Добавляем новое значение в массив
+			 if (selectedService !== '') {
+				updatedData.splice(index, 0, selectedService);
+			 }
+		
+			 return updatedData;
+		 });
 	}
  }
+
 //ServiceCar_2
 const handleServiceData_2 = (e: React.ChangeEvent<HTMLSelectElement>, index: number) => {
 	const selectedService = e.target.value;
 	if (!serviceData_2.includes(selectedService)) {
-	  setServiceData_2(prev => {
+		setServiceData_2(prev => {
 		 const updatedData = [...prev];
-		 updatedData[index] = selectedService;
-		 return updatedData;
-	  });
-	}
+		 if (updatedData[index]) {
+			 updatedData.splice(index, 1);
+		  }
+		  // Добавляем новое значение в массив
+		  if (selectedService !== '') {
+			 updatedData.splice(index, 0, selectedService);
+		  }
+	 
+		  return updatedData;
+		});
+	 }
 }
 
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -206,33 +221,33 @@ const handleServiceData_2 = (e: React.ChangeEvent<HTMLSelectElement>, index: num
 			id: current?.id,
 
 		}
-		if(inputData.registrationNumber_1 === ''){
-			return setSuccess('Введіть номер авто');
+		// if(inputData.registrationNumber_1 === ''){
+		// 	return setSuccess('Введіть номер авто');
 			
-		}
+		// }
 		if(inputData.carModel_1 === ''){
 			setSuccess('Введіть назву авто');
 			return
 		}
-		if(widthTire === ''){
-			setSuccess('Введіть довжину колес');
-			return 
-		}
-		if(heightTire === ''){
-			return setSuccess('Введіть висоту колес');
-		}
-		if(radiusTire === ''){
-			return setSuccess('Введіть радіус колес');
-		}
-		if(serviceData_1.length <= 0){
-			return setSuccess('Введіть хочаб один комплекс робіт');
-		}
-		if(inputData.name === ''){
-			return setSuccess('Введіть ім я кліента');
-		}
-		if(inputData.behavior === ''){
-			return setSuccess('Введіть рейтинг кліента');
-		}
+		// if(widthTire === ''){
+		// 	setSuccess('Введіть довжину колес');
+		// 	return 
+		// }
+		// if(heightTire === ''){
+		// 	return setSuccess('Введіть висоту колес');
+		// }
+		// if(radiusTire === ''){
+		// 	return setSuccess('Введіть радіус колес');
+		// }
+		// if(serviceData_1.length <= 0){
+		// 	return setSuccess('Введіть хочаб один комплекс робіт');
+		// }
+		// if(inputData.name === ''){
+		// 	return setSuccess('Введіть ім я кліента');
+		// }
+		// if(inputData.behavior === ''){
+		// 	return setSuccess('Введіть рейтинг кліента');
+		// }
 		if(inputData.phone_1 === ''){
 			return setSuccess('Введіть телефон кліента');
 		}
@@ -428,11 +443,10 @@ const handleServiceData_2 = (e: React.ChangeEvent<HTMLSelectElement>, index: num
 				<label className='block mb-1'>
 					<span className='block text-[15px]'>Номер Авто</span>
 					<input value={inputData.registrationNumber_1} onChange={handleOnChange} type="text" className={`
-					${success === 'Введіть номер авто' ? "border-red-500" : "border-none"}
 					 w-full bg-gray-300 rounded-md pt-1 text-[14px] pb-1 pl-3 text-black border-[1px] `} name='registrationNumber_1'/>
 				</label>
 				<label className='block mb-1'>
-					<span className='block text-[15px]'>Назва Авто</span>
+					<span className='block text-[15px] text-red-200'>Назва Авто</span>
 					<input value={inputData.carModel_1} onChange={handleOnChange} type="text" className={`
 					${success === 'Введіть назву авто' ? "border-red-500" : "border-none"}
 					bg-gray-300 w-full rounded-md pt-1 text-[14px] border-[1px] pb-1 pl-3 text-black`} name='carModel_1'/>
@@ -441,25 +455,22 @@ const handleServiceData_2 = (e: React.ChangeEvent<HTMLSelectElement>, index: num
 					<span className='block text-[15px]'>Радіус колес</span>
 					<div className='flex'>
 					<select value={widthTire} onChange={handelOnChangeTireWidth} className={`
-					${success === 'Введіть довжину колес' ? "border-red-500" : "border-none"}
 					w-full mr-2 h-[30px] text-[14px] bg-slate-200 rounded-md border-[1px] pt-1 pb-1 pl-1 text-black`} >
-					<option value="">/</option>
+					<option value="">ш</option>
 					{tireWidth.map((item, index) => (
 							<option key={index} value={item}>{item}</option>
 						))}
 					</select>
 					<select value={heightTire} onChange={handelOnChangeTireHeight} className={`
-					${success === 'Введіть висоту колес' ? "border-red-500" : "border-none"}
 					w-full mr-2 h-[30px] text-[14px] bg-slate-200 border-[1px] rounded-md pt-1 pb-1 pl-1 text-black`} >
-					<option value="">/</option>
+					<option value="">в</option>
 					{tireHeight.map((item, index) => (
 							<option key={index} value={item}>{item}</option>
 						))}
 					</select>
 					<select value={radiusTire} onChange={handelOnChangeTireRadius} className={`
-					${success === 'Введіть радіус колес' ? "border-red-500" : "border-none"}
 					w-full h-[30px] text-[14px] bg-slate-200 border-[1px] rounded-md pt-1 pb-1 pl-1 text-black`}>
-					<option value="">/</option>
+					<option value="">р</option>
 					{tireRadius.map((item, index) => (
 							<option key={index} value={item}>{item}</option>
 						))}
@@ -474,9 +485,8 @@ const handleServiceData_2 = (e: React.ChangeEvent<HTMLSelectElement>, index: num
 							<div key={i} className='flex items-center w-full'>
 							<p className='mr-2'>{i + 1}</p>
         <select value={serviceData_1[i] || ''} key={i} onChange={(e) => handleServiceData_1(e, i)} className={`
-		  ${success === "Введіть хочаб один комплекс робіт" ? "border-red-500" : "border-none"}
 		  w-full mb-[8.5px] h-[29px] text-[14px] bg-slate-200 border-[1px] rounded-md pt-1 pb-1 pl-1 text-black`}>
-          <option value=""></option>
+          <option></option>
           {serviceCar.map((service, index) => (
             <option key={index} value={service}>{service}</option>
           ))}
@@ -504,19 +514,19 @@ const handleServiceData_2 = (e: React.ChangeEvent<HTMLSelectElement>, index: num
 					<span className='block text-[15px]'>Радіус колес</span>
 					<div className='flex'>
 					<select value={widthTire_2} onChange={handelOnChangeTireWidth_2} className='w-full mr-2 h-[30px] text-[14px] bg-slate-200 rounded-md pt-1 pb-1 pl-1 text-black' >
-					<option value="">/</option>
+					<option value="">ш</option>
 					{tireWidth.map((item, index) => (
 							<option key={index} value={item}>{item}</option>
 						))}
 					</select>
 					<select value={heightTire_2} onChange={handelOnChangeTireHeight_2} className='w-full mr-2 h-[30px] text-[14px] bg-slate-200 rounded-md pt-1 pb-1 pl-1 text-black' >
-					<option value="">/</option>
+					<option value="">в</option>
 					{tireHeight.map((item, index) => (
 							<option key={index} value={item}>{item}</option>
 						))}
 					</select>
 					<select value={radiusTire_2} onChange={handelOnChangeTireRadius_2} className='w-full h-[30px] text-[14px] bg-slate-200 rounded-md pt-1 pb-1 pl-1 text-black' >
-					<option value="">/</option>
+					<option value="">р</option>
 					{tireRadius.map((item, index) => (
 							<option key={index} value={item}>{item}</option>
 						))}
@@ -554,7 +564,6 @@ const handleServiceData_2 = (e: React.ChangeEvent<HTMLSelectElement>, index: num
 				<label className='block mr-5 w-full'>
 					<span className='block text-[15px]'>Ім'я</span>
 					<input value={inputData.name} onChange={handleOnChange} type="text" className={`
-					 ${success === "Введіть ім я кліента" ? "border-red-500" : "border-none"}
 					bg-gray-300 w-full text-[14px] rounded-md border-[1px] pt-1 pb-1 pl-3 text-black`} name='name'/>
 				</label>
 				<label className='block mb-2 mr-5 w-1/4'>
@@ -564,7 +573,6 @@ const handleServiceData_2 = (e: React.ChangeEvent<HTMLSelectElement>, index: num
 				<label className='block mr-5 mb-2'>
 					<span className='block text-[15px]'>Як людина</span>
 					<input value={inputData.behavior} onChange={handleOnChange} type="number" className={`
-					 ${success === "Введіть рейтинг кліента" ? "border-red-500" : "border-none"}
 					bg-gray-300 text-[14px] w-full border-[1px] rounded-md pt-1 pb-1 pl-3 text-black`} name='behavior'/>
 				</label>
 					</div>
@@ -577,19 +585,19 @@ const handleServiceData_2 = (e: React.ChangeEvent<HTMLSelectElement>, index: num
 				</div>
 				<div className='w-1/2 pl-5'>
 				<label className='block mb-2'>
-					<span className='block text-[15px]'>Основний Телефон_1</span>
-					<InputMask value={inputData.phone_1} suppressContentEditableWarning mask="+38 (999) 999-99-99" placeholder="+38 (050) 500-50-05" onChange={handleOnChange} type="text" className={`
+					<span className='block text-[15px] text-red-200'>Основний Телефон_1</span>
+					<InputMask value={inputData.phone_1} suppressContentEditableWarning mask="9999999999" placeholder="0505005005" onChange={handleOnChange} type="text" className={`
 					${success === "Введіть телефон кліента" ? "border-red-500" : "border-none"}
 					bg-gray-300 text-[14px] w-full rounded-md border-[1px] pt-1 pb-1 pl-3 text-black`}name='phone_1'/>
 				</label>
 				<div className='flex justify-between'>
 				<label className='block mb-2'>
 					<span className='block text-[15px]'>Телефон_2</span>
-					<InputMask value={inputData.phone_2} suppressContentEditableWarning mask="+38 (999) 999-99-99" placeholder="+38 (050) 500-50-05" onChange={handleOnChange} type="text" className='bg-gray-300 text-[14px] w-full rounded-md pt-1 pb-1 pl-3 text-black' name='phone_2'/>
+					<InputMask value={inputData.phone_2} suppressContentEditableWarning mask="9999999999" placeholder="0505005005" onChange={handleOnChange} type="text" className='bg-gray-300 text-[14px] w-full rounded-md pt-1 pb-1 pl-3 text-black' name='phone_2'/>
 				</label>
 				<label className='block mb-2'>
 					<span className='block text-[15px]'>Телефон_3</span>
-					<InputMask value={inputData.phone_3} suppressContentEditableWarning mask="+38 (999) 999-99-99" placeholder="+38 (050) 500-50-05" onChange={handleOnChange} type="text" className='bg-gray-300 text-[14px] w-full rounded-md pt-1 pb-1 pl-3 text-black' name='phone_3'/>
+					<InputMask value={inputData.phone_3} suppressContentEditableWarning mask="9999999999" placeholder="0505005005" onChange={handleOnChange} type="text" className='bg-gray-300 text-[14px] w-full rounded-md pt-1 pb-1 pl-3 text-black' name='phone_3'/>
 				</label>
 				</div>
 				</div>
@@ -616,7 +624,9 @@ const handleServiceData_2 = (e: React.ChangeEvent<HTMLSelectElement>, index: num
       />
     	</label>
 		 <label className='block mr-5'>
-					<span className='block text-[15px]'>Марка</span>
+					<span className={`
+					${!selectedDate ? 'text-white' : 'text-red-200'}
+					block text-[15px]`}>Марка</span>
 					<input value={inputData.tireBrend} onChange={handleOnChange} type="text" className={`
 					${success === "Введіть марку колес" ? "border-red-500" : "border-none"}
 					bg-gray-300 text-[14px] w-full rounded-md border-[1px] pt-1 pb-1 pl-3 text-black`} name='tireBrend'/>
@@ -636,7 +646,9 @@ const handleServiceData_2 = (e: React.ChangeEvent<HTMLSelectElement>, index: num
       />
     	</label>
 				<label className='block mr-5'>
-					<span className='block text-[15px]'>Рік випуску</span>
+					<span className={`
+					${!selectedDate ? 'text-white' : 'text-red-200'}
+					block text-[15px]`}>Рік випуску</span>
 					<input value={inputData.tiersIssueYears} onChange={handleOnChange} type="text" className={`
 					${success === "Введіть рік випуску колес" ? "border-red-500" : "border-none"}
 					bg-gray-300 text-[14px] w-full border-[1px] rounded-md pt-1 pb-1 pl-3 text-black`} name='tiersIssueYears'/>
@@ -645,7 +657,9 @@ const handleServiceData_2 = (e: React.ChangeEvent<HTMLSelectElement>, index: num
 					</div>
 					<div className='w-1/2'>
 				<label className='block mb-2'>
-					<span className='block text-[15px]'>Кількість та радіус колес</span>
+					<span className={`
+					${!selectedDate ? 'text-white' : 'text-red-200'}
+					block text-[15px]`}>Кількість та радіус колес</span>
 					<div className='flex'>
 					<label className='block mr-5'>
 					<input value={inputData.tiersValue} placeholder='шт.' onChange={handleOnChange} type="text" className={`

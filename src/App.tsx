@@ -9,26 +9,39 @@ import LoginPage from './pages/LoginPage';
 import { useEffect } from 'react';
 import { useAppDispatch } from './hooks/reduxHooks';
 import { fetchAllClients } from './redux/operations';
+import SignupPage from './pages/SignupPage';
+// import { AuthProvider } from './hooks/AuthContext';
+import PrivateRoute from './Routes/PrivateRoute';
+import { useAuth } from './hooks/AuthContext';
+import ForgetPassword from './pages/ForgetPassword';
 
 function App() {
-	const isAuthenticated = true;
+	const {currentUser} = useAuth() ?? {};
+	
 	const dispatch = useAppDispatch();
 
 	useEffect(() => {
-		dispatch(fetchAllClients());
-	},[dispatch])
+		if(currentUser){
+			dispatch(fetchAllClients());
+		} 
+			
+	},[dispatch, currentUser])
 
   return (
+
+
+
 <Routes>
-{isAuthenticated ? (
-        <Route path='/' element={<Layout/>}>
-          <Route index element={<HomePage/>} />
+        <Route path='/' element={<PrivateRoute component={Layout} redirect='/signin'/> }>
+          <Route index element={<PrivateRoute component={HomePage} redirect='/signin'/> } />
         </Route>
-      ) : (
-        // Если пользователь не авторизован, перенаправить на страницу регистрации
-        <Route path='/' element={<LoginPage />} />
-      )}
+		  		<Route path='/signin' element={<LoginPage />} />
+		 	 	<Route path='/signup' element={<SignupPage />} />
+				  <Route path='/resetpassword' element={<ForgetPassword />} />
 </Routes>
+
+
+
   )
 }
 

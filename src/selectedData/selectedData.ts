@@ -1,7 +1,7 @@
 
 //General info
-export const behaviorData = ['норм', 'не дуже', 'ррЕдиска'];
-export const whellStorData = ["не здав", "здав"];
+// export const behaviorData = ['норм', 'не дуже', 'ррЕдиска'];
+// export const whellStorData = ["не здав", "здав"];
 
 //Tire
 export const tireWidth = ["145", "155", "165", "175", "185", "195", "205", "215", "225", "235", "245", "255", "265", "275", "285", "295", "305", "315", "325"];

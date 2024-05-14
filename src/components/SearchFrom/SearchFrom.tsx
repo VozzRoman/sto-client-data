@@ -2,17 +2,25 @@ import { FC } from 'react';
 
 import { useAppDispatch } from '../../hooks/reduxHooks';
 import { filteredValue } from '../../redux/filterSlice/filterSlice';
+import { useAuth } from '../../hooks/AuthContext';
 
 
 const SearchForm: FC = () => {
 
-// const [filter, setFilter] = useState<string>('');
+const {logout} = useAuth() ?? {};
 
 const dispatch = useAppDispatch();
 
 const handleOnchange = (e: React.ChangeEvent<HTMLInputElement>) => {
 	// setFilter(e.target.value);
 	dispatch(filteredValue(e.target.value))
+}
+
+const handleLogOut = () => {
+	if(logout){
+		logout();
+	}
+	
 }
 
 
@@ -27,7 +35,7 @@ const handleOnchange = (e: React.ChangeEvent<HTMLInputElement>) => {
 			placeholder='шукати'
 			onChange={handleOnchange} 
 			name='query'/>
-			<button className='absolute text-white font-medium top-[3px] right-[4px]  w-[90px] h-[35px] bg-orange-400 hover:bg-orange-600 transition-all duration-300 rounded-full' 
+			<button onClick={handleLogOut} className='absolute text-white font-medium top-[3px] right-[4px]  w-[90px] h-[35px] bg-orange-400 hover:bg-orange-600 transition-all duration-300 rounded-full' 
 			type='button'>
 				Вийти			
 			</button>

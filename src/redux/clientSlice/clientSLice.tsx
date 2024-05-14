@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { addClient, fetchAllClients, findByIdClient, removeClient, searchClient, updateClient } from "../operations";
+import { addClient, fetchAllClients, findByIdClient, removeClient, updateClient } from "../operations";
 import { CLientI } from "../../types/types";
 
 
@@ -24,23 +24,7 @@ const initialState: ClientState = {
 export const clientSLice = createSlice ({
 	name:"clients",
 	initialState,
-	reducers:{
-		// clienFilter(state, actions) {
-		// 	const filter = actions.payload;
-		// 	console.log(filter);
-		// 	state.clients = state.clients.filter(item => 
-		// 		item.registrationNumber_1.includes(filter) || 
-		// 		item.registrationNumber_2.includes(filter) ||
-		// 		item.phone_1.includes(filter) ||
-		// 		item.phone_2.includes(filter) ||
-		// 		item.phone_3.includes(filter) ||
-		// 		item.carModel_1.includes(filter) ||
-		// 		item.carModel_2.includes(filter)
-		// 		)
-		// },
-	
-
-	},
+	reducers:{},
 	extraReducers:(bulider) => {
 		bulider
 		//get
@@ -134,21 +118,10 @@ export const clientSLice = createSlice ({
 				state.error = actions.payload;
 			}
 		})
-		//Search
-		// .addCase(searchClient.pending, (state) => {
-		// 	state.isLoading = true;
-		// 	state.error = null;
-		// })
-		// .addCase(searchClient.fulfilled, (state, actions) => {
-		// 	console.log("actSearch", actions.payload);
-		// 	state.isLoading = false;
-		// 	state.filtered = actions.payload
-		// 	state.error = null;
-		// })
 		
 	}
 
 })
 
-export const {clienFilter, resetFilter} = clientSLice.actions
+// export const {clienFilter, resetFilter} = clientSLice.actions
 export default clientSLice.reducer;

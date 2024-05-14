@@ -37,27 +37,32 @@ const clientInfo = useAppSelector(state => state.clientReducer.current);
 				<div className='w-1/3 mr-4 bg-slate-600 bg-opacity-50 rounded-md p-3'>
 				<label className='block mb-1 border-b-[1px] border-gray-300 border-opacity-10'>
 					<span className='block'>Номер Авто</span>
-					<p className='w-full rounded-md text-black text-[18px] font-semibold'>{clientInfo?.registrationNumber_1}</p>
+					<p className='w-full rounded-md text-black text-[18px] font-semibold'>{clientInfo?.registrationNumber_1 ? clientInfo?.registrationNumber_1 : <span className="text-gray-700">Відсутній</span>}</p>
 				</label>
 				<label className='block border-b-[1px] border-gray-300 border-opacity-10'>
 					<span className='block'>Назва Авто</span>
 					<p className='rounded-md pb-1 text-black text-[18px] font-semibold'>{clientInfo?.carModel_1}</p>
 				</label>
 				<label className='block'>
-					<span className='block'>Радіус колес</span>
+					<span className='block whitespace-nowrap'>Радіус колес</span>
 					<div className='flex'>
-					<p className='rounded-md pb-1 text-black text-[18px] font-semibold'>{clientInfo?.tire_1.width}/</p>
-					<p className='rounded-md pb-1 text-black text-[18px] font-semibold'>{clientInfo?.tire_1.height}/</p>
-					<p className='rounded-md pb-1 text-black text-[18px] font-semibold'>{clientInfo?.tire_1.radius}</p>
+						{clientInfo?.tire_1.radius && clientInfo?.tire_1.height && clientInfo?.tire_1.radius &&(<>
+					<p className='rounded-md pb-1 text-black text-[18px] font-semibold'>{clientInfo?.tire_1.width ? clientInfo?.tire_1.width : <span className="text-gray-700">No</span> }/</p>
+					<p className='rounded-md pb-1 text-black text-[18px] font-semibold'>{clientInfo?.tire_1.height ? clientInfo?.tire_1.height : <span className="text-gray-700">No</span> }/</p>
+					<p className='rounded-md pb-1 text-black text-[18px] font-semibold'>{clientInfo?.tire_1.radius ? clientInfo?.tire_1.radius : <span className="text-gray-700">No</span> }</p>
+						</>)}
+						{clientInfo?.tire_1 && <p className='rounded-md pb-1 text-black text-[18px] font-semibold'>{clientInfo?.tire_1.radius ? clientInfo?.tire_1.radius : <span className="text-gray-700">No</span> }</p>}
 					</div>
 				</label>
 				</div>
-				<div className={`
+				<div className={`w-full
 				${clientInfo?.carModel_2 ? "ml-[0px]" : "ml-[20px]"}
 				`}>
 					<label className='w-full'>
 						<p className='ml-3'>Об'єм робіт</p>
-					<ul className="w-full">
+
+					</label>
+					{clientInfo?.serviceCar_1.length ? (<ul className="w-full">
 					{clientInfo?.serviceCar_1.map((item, index) => {
 						return (
 							<div key={index} className="flex items-center">
@@ -66,8 +71,7 @@ const clientInfo = useAppSelector(state => state.clientReducer.current);
 							</div>
 						)
 					})}
-					</ul>
-					</label>
+					</ul>) : <div className="flex items-center justify-center w-full rounded-md h-[170px] bg-slate-600 bg-opacity-50"><span className="text-gray-700 text-xl font-semibold">Ще не визначений!</span></div>}
 				</div>
 					</div>
 				</div>
@@ -77,26 +81,29 @@ const clientInfo = useAppSelector(state => state.clientReducer.current);
 				<div className='flex'>
 				<div className='w-1/3 mr-4 mr-4 bg-slate-600 bg-opacity-50 rounded-md p-3'>
 				<label className='block mb-1 border-b-[1px] border-gray-300 border-opacity-10'>
-					<span className='block '>Номер Авто_2</span>
-					<p className='w-full rounded-md text-black text-[18px] font-semibold'>{clientInfo?.registrationNumber_2}</p>
+					<span className='block whitespace-nowrap'>Номер Авто_2</span>
+					<p className='w-full rounded-md text-black text-[18px] font-semibold'>{clientInfo?.registrationNumber_2 ? clientInfo?.registrationNumber_2 : <span className="text-gray-700">Відсутній</span>}</p>
 				</label>
 				<label className='block border-b-[1px] border-gray-300 border-opacity-10'>
 					<span className='block'>Назва Авто</span>
 					<p className='rounded-md pb-1 text-black text-[18px] font-semibold'>{clientInfo?.carModel_2}</p>
 				</label>
 				<label className='block'>
-					<span className='block'>Радіус колес</span>
+					<span className='block whitespace-nowrap'>Радіус колес</span>
 					<div className='flex'>
-					<p className='rounded-md pb-1 text-black text-[18px] font-semibold'>{clientInfo?.tire_2.width}/</p>
-					<p className='rounded-md pb-1 text-black text-[18px] font-semibold'>{clientInfo?.tire_2.height}/</p>
-					<p className='rounded-md pb-1 text-black text-[18px] font-semibold'>{clientInfo?.tire_2.radius}</p>
+					{clientInfo?.tire_2.radius && clientInfo?.tire_2.height && clientInfo?.tire_2.radius &&(<>
+					<p className='rounded-md pb-1 text-black text-[18px] font-semibold'>{clientInfo?.tire_2.width ? clientInfo?.tire_2.width : <span className="text-gray-700">No</span> }/</p>
+					<p className='rounded-md pb-1 text-black text-[18px] font-semibold'>{clientInfo?.tire_2.height ? clientInfo?.tire_2.height : <span className="text-gray-700">No</span> }/</p>
+					<p className='rounded-md pb-1 text-black text-[18px] font-semibold'>{clientInfo?.tire_2.radius ? clientInfo?.tire_2.radius : <span className="text-gray-700">No</span> }</p>
+						</>)}
+						{clientInfo?.tire_2 && !clientInfo?.tire_2.height && !clientInfo?.tire_2.radius && <p className='rounded-md pb-1 text-black text-[18px] font-semibold'>{clientInfo?.tire_2.radius ? clientInfo?.tire_2.radius : <span className="text-gray-700">No</span> }</p>}
 					</div>
 				</label>
 				</div>
-				<div className=''>
+				<div className='w-full'>
 					<label className='w-full'>
 						<p className='ml-3'>Об'єм робіт</p>
-					<ul className="w-full">
+					{clientInfo.serviceCar_2.length ? (<ul className="w-full">
 					{clientInfo?.serviceCar_2.map((item, index) => {
 						return (
 							<div key={index} className="flex items-center">
@@ -105,7 +112,7 @@ const clientInfo = useAppSelector(state => state.clientReducer.current);
 							</div>
 						)
 					})}
-					</ul>
+					</ul>): <div className="flex items-center justify-center w-full rounded-md h-[170px] bg-slate-600 bg-opacity-50"><span className="text-gray-700 text-xl font-semibold">Ще не визначений!</span></div>}
 					</label>
 				</div>
 					</div>
@@ -120,7 +127,7 @@ const clientInfo = useAppSelector(state => state.clientReducer.current);
 				<div className='w-1/2 relative'>
 				<label className='block mb-2 mr-5 border-b-[1px] border-gray-300 border-opacity-10'>
 					<span className='block'>Ім'я</span>
-					<p className='rounded-md text-black text-[18px] font-semibold'>{clientInfo?.name}</p>
+					<p className='rounded-md text-black text-[18px] font-semibold'>{clientInfo?.name ? clientInfo?.name : <span className="text-gray-700">Відсутнє</span>}</p>
 					{clientInfo?.discount && <div>
 					<LiaAwardSolid className="absolute top-0 right-[20px]" size={80} color="orange"/>
 					<p className="absolute top-[20px] right-[44px] font-semibold">{clientInfo?.discount}<span className="text-[10px]">%</span></p></div>}
@@ -132,7 +139,7 @@ const clientInfo = useAppSelector(state => state.clientReducer.current);
 				</label>
 				<label className='block mr-5'>
 					<span className='block'> Недоліки авто</span>
-					<p className='rounded-md text-black text-[18px] font-semibold underline'>{clientInfo?.carFlaws ? clientInfo.carFlaws: "немае"}</p>
+					<p className='rounded-md text-black text-[16px] font-normal p-2 bg-slate-600 bg-opacity-50'>{clientInfo?.carFlaws ? clientInfo.carFlaws: "немае"}</p>
 				</label>
 				</div>
 				<div className='w-1/2 pl-5'>
@@ -179,7 +186,7 @@ const clientInfo = useAppSelector(state => state.clientReducer.current);
 				</label>
 				<label className='block mb-2 mr-5 w-full'>
 					<span className='block'>Недоліки колес</span>
-					<p className='rounded-md pb-1 text-black text-[18px] w-[250px] break-words font-semibold'>{clientInfo?.tireFlawStore ? clientInfo.tireFlawStore: "немае"}</p>
+					<p className='rounded-md pb-1 text-black text-[16px] break-words font-normal leading-[1.0]'>{clientInfo?.tireFlawStore ? clientInfo.tireFlawStore: "немае"}</p>
 				</label>
 					</div>
 					</div>
@@ -208,7 +215,7 @@ const clientInfo = useAppSelector(state => state.clientReducer.current);
 					</div>
 						</label>}
 					</div>
-				</div>) : (<div className='bg-slate-800 bg-opacity-40 rounded-md pl-3 pt-2 pb-2'><p className="text-center text-xl text-black font-semibold">{clientInfo?.endDataStorage ? `Видані ${clientInfo.endDataStorage}` : "Колеса під зберігання немає"}</p></div>)}
+				</div>) : (<div className='bg-slate-800 bg-opacity-40 rounded-md pl-3 pt-2 pb-2'><div className="text-center text-xl text-black font-semibold">{clientInfo?.endDataStorage ? <><p>Видані <span className="text-red-200 text-[19px]">{clientInfo.endDataStorage}</span></p></> : "Колеса під зберігання немає"}</div></div>)}
 				</div>
 			
 			</div>

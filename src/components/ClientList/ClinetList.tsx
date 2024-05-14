@@ -10,7 +10,6 @@ import AlertWindow from '../AlertWindow/AlertWindow';
 
 const getFilteredCOntacts = (inputData: string, listContact: CLientI[]) => {
 	const formattedInputData = inputData.trim().toLowerCase();
-	console.log(listContact);
   return listContact.filter(item => 
 	item.registrationNumber_1.toLocaleLowerCase().includes(formattedInputData) ||
 	item.registrationNumber_2.toLocaleLowerCase().includes(formattedInputData) ||
@@ -37,7 +36,6 @@ const ClinetList:FC = () => {
 	const dispatch = useAppDispatch();
 		//InfoModalOpen-----
 		const handelModalOpen = (value: number) => {
-			console.log(value);
 			setIsOpen(true);
 			dispatch(findByIdClient(String(value)))	
 		}

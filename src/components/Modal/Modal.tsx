@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { FC, useState} from 'react';
+import { FC } from 'react';
 import {createPortal} from 'react-dom';
 
 import { MdOutlineClose } from "react-icons/md";

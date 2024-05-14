@@ -1,20 +1,22 @@
 {
-  "name": "test-pwa",
+  "name": "client-base",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host 0.0.0.0 --port 5173",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "server": "json-server --watch src/db/db.json --port 5050"
+    "server": "json-server --host 0.0.0.0 src/db/db.json --port 5050",
+    "start": "vite --host 0.0.0.0 --port 5173"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.3",
     "@types/react-datepicker": "^6.2.0",
     "axios": "^1.6.8",
     "classnames": "^2.5.1",
+    "firebase": "^10.11.1",
     "json-server": "^1.0.0-alpha.23",
     "normalize.css": "^8.0.1",
     "react": "^18.2.0",
@@ -31,6 +33,7 @@
   "devDependencies": {
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
+    "@types/react-input-mask": "^3.0.5",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
     "@vitejs/plugin-react": "^4.2.1",
