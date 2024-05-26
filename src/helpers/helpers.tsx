@@ -38,8 +38,6 @@ export const getFilteredTire = (inputData: string | TrieSize , listContact: Tire
 	
 	}
 	if(typeof inputData === 'object'){
-		console.log("InputData", inputData);
-	
 		return listContact.filter(item => 
 		 item.tireSize.width.toLocaleLowerCase().includes(inputData.width) &&
 		 item.tireSize.height.toLocaleLowerCase().includes(inputData.height) &&

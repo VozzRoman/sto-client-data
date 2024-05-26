@@ -1,6 +1,6 @@
-import { FC, useState } from 'react';
+import { FC, Suspense, startTransition, useState } from 'react';
 import Container from '../Container/Container';
-import { Outlet } from 'react-router';
+import { Outlet, useNavigate } from 'react-router';
 import SearchForm from '../SearchFrom/SearchFrom';
 import Modal from '../Modal/Modal';
 import shinka from '../../assets/image/shina.png';
@@ -8,19 +8,28 @@ import { Link } from 'react-router-dom';
 import { FaUserCircle } from "react-icons/fa";
 import { useAuth } from '../../hooks/AuthContext';
 import { TiInfo } from "react-icons/ti";
+import Loader from '../Loader/Loader';
 const StoreLayout:FC = () => {
 const [isOpen, setIsOpen] = useState<boolean>(false);
-
+const navigate = useNavigate();
 const {currentUser} = useAuth() ?? {};
+
+const openModal = () => {
+	setIsOpen(true)
+	document.body.style.overflow = 'hidden';
+}
 
 const onCLose = () => {
 	setIsOpen(false)
 	document.body.style.overflow = 'auto';
 }
-const openModal = () => {
-	setIsOpen(true)
-	document.body.style.overflow = 'hidden';
+const handleButtonLink = () => {
+	startTransition(() => {
+      navigate('/clientData');
+    });
+	
 }
+
 
 	return (
 		<div>
@@ -33,9 +42,9 @@ const openModal = () => {
 			type='submit'>
 					+
 			</button>}
-			<Link to='/clientData' className='text-orange-400 mr-3 max-sm:mr-1 hover:text-white transition-colors duration-300 ease-linear'>
+			<button onClick={handleButtonLink} className='text-orange-400 mr-3 max-sm:mr-1 hover:text-white transition-colors duration-300 ease-linear'>
 			<FaUserCircle size={42}/>
-			</Link>
+			</button>
 			{currentUser && <Link to='statistic' className='text-orange-400 hover:text-white transition-colors duration-300 ease-linear'>
 			<TiInfo className='rounded-md' size={53}/>
 			</Link>}
@@ -51,7 +60,9 @@ const openModal = () => {
 		<main>
 			<section>
 			<Container>
+			<Suspense fallback={<div className='w-full h-screen flex items-center justify-center'><Loader/></div>}>
 				<Outlet/>
+			</Suspense>
 			</Container>
 			</section>
 		</main>

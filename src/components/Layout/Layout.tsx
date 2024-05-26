@@ -1,16 +1,16 @@
-import { FC, useState } from 'react';
+import { FC, Suspense, startTransition, useState } from 'react';
 import Container from '../Container/Container';
-import { Outlet } from 'react-router';
+import { Outlet, useNavigate } from 'react-router';
 import SearchForm from '../SearchFrom/SearchFrom';
 import Modal from '../Modal/Modal';
 import shinka from '../../assets/image/shina.png';
 import { GiCarWheel } from "react-icons/gi";
-import { Link } from 'react-router-dom';
 import { useAuth } from '../../hooks/AuthContext';
+import Loader from '../Loader/Loader';
 
 const Layout:FC = () => {
 const [isOpen, setIsOpen] = useState<boolean>(false);
-
+const navigate = useNavigate();
 const {currentUser} = useAuth() ?? {};
 const onCLose = () => {
 	setIsOpen(false)
@@ -21,11 +21,15 @@ const openModal = () => {
 	document.body.style.overflow = 'hidden';
 }
 
+const handleButtonLink = () => {
+	startTransition(() => {
+      navigate('/tireStore');
+    });
+	
+}
+
 	return (
-		
-		
 		<div>
-			
 		<header className='bg-slate-700 opacity-[0.99] shadow-md'>
 			<Container>
 				<div className='flex relative items-center h-[60px] justify-between'>
@@ -35,9 +39,9 @@ const openModal = () => {
 			type='submit'>
 					+
 			</button>}
-			<Link to='/tireStore' className='text-orange-400 hover:text-black transition-colors duration-300 ease-linear'>
+			<button onClick={handleButtonLink} className='text-orange-400 hover:text-black transition-colors duration-300 ease-linear'>
 			<GiCarWheel size={42}/>
-			</Link>
+			</button>
 					</div>
 					<Modal onClose={onCLose} isOpen={isOpen}/>
 					<SearchForm/>
@@ -46,13 +50,13 @@ const openModal = () => {
 			</div>
 				</div>
 			</Container>
-			
 		</header>
-
 		<main>
 			<section>
 			<Container>
-				<Outlet/>
+				<Suspense fallback={<div className='w-full h-screen flex items-center justify-center'><Loader/></div>}>
+						<Outlet/>
+				</Suspense>
 			</Container>
 			</section>
 		</main>

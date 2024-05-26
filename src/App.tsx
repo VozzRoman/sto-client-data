@@ -1,35 +1,38 @@
 import './App.css'
 import 'normalize.css';
 import { Route, Routes} from 'react-router';
-import Layout from './components/Layout/Layout';
-import HomePage from './pages/HomePage';
-import LoginPage from './pages/LoginPage';
-import { useEffect} from 'react';
+import { Suspense, lazy, useEffect} from 'react';
 import { useAppDispatch } from './hooks/reduxHooks';
 import { fetchAllClients, fetchAllSoldTire, fetchAllTires } from './redux/operations';
-import SignupPage from './pages/SignupPage';
 import { useAuth } from './hooks/AuthContext';
-import ForgetPassword from './pages/ForgetPassword';
-import SelectDataPage from './pages/SelectDataPage';
-import StoreLayout from './components/StoreLayout/StoreLayout';
-import StoreTirePage from './pages/StoreTirePage';
-import SoldStorePage from './pages/SoldStorePage';
+import Loader from './components/Loader/Loader';
+//----Suspens--------
+const SelectDataPage = lazy(() => import('./pages/SelectDataPage'));
+const LoginPage = lazy(() => import(('./pages/LoginPage')));
+const ForgetPassword = lazy(() => import(('./pages/ForgetPassword')));
+const SignupPage = lazy(() => import(('./pages/SignupPage')));
+const HomePage = lazy(() => import(('./pages/HomePage')));
+const Layout = lazy(() => import(('./components/Layout/Layout')));
+const StoreLayout = lazy(() => import(('./components/StoreLayout/StoreLayout')));
+const StoreTirePage = lazy(() => import(('./pages/StoreTirePage')));
+const SoldStorePage = lazy(() => import(('./pages/SoldStorePage')));
+
 
 function App() {
+//Регистрация
 	const {currentUser} = useAuth() ?? {};
 	const dispatch = useAppDispatch();
-
-
-
+//Загрузка кілиенти
 	useEffect(() => {
 		dispatch(fetchAllClients());
 			
 	},[dispatch, currentUser])
-
+//Загрузка склад
 	useEffect(() => {
 		dispatch(fetchAllTires());
 			
 	},[dispatch, currentUser])
+//Загрузка продание колеса
    useEffect(() => {
 		dispatch(fetchAllSoldTire());
 	},[dispatch])
@@ -37,7 +40,7 @@ function App() {
   return (
 <>
 <Routes>
-		<Route path='/' element={<SelectDataPage/>}/>
+		<Route path='/' element={<Suspense fallback={<div className='w-screen h-screen flex items-center justify-center'><Loader/></div>}><SelectDataPage/></Suspense> }/>
         <Route path='/clientData' element={<Layout/> }>
           <Route index element={<HomePage/>}/>
         </Route>
@@ -45,9 +48,9 @@ function App() {
           <Route index element={<StoreTirePage/>} />
 			 <Route path='/tireStore/statistic' element={<SoldStorePage/>}/>
         </Route>
-		  		<Route path='/signin' element={<LoginPage />} />
-		 	 	<Route path='/signup' element={<SignupPage />} />
-				<Route path='/resetpassword' element={<ForgetPassword />} />
+		  		<Route path='/signin' element={<Suspense fallback={<div className='w-screen h-screen flex items-center justify-center'><Loader/></div>}><LoginPage/></Suspense>} />
+		 	 	<Route path='/signup' element={<Suspense fallback={<div className='w-screen h-screen flex items-center justify-center'><Loader/></div>}><SignupPage/></Suspense> } />
+				<Route path='/resetpassword' element={<Suspense fallback={<div className='w-screen h-screen flex items-center justify-center'><Loader/></div>}> <ForgetPassword/></Suspense>} />
 </Routes>
 </>
 )
