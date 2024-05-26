@@ -46,14 +46,20 @@ const LoginPage:FC = () => {
 
 	return (
 		<Container>
-			<div className='h-screen flex items-center justify-center'>
-				<form onSubmit={handelSubmit} className='max-w-[300px] w-full bg-slate-400 p-[20px] rounded-md opacity-[0.97]'>
+			
+			<div className='h-screen flex flex-col items-center justify-center'>
+			<div className='mb-[10px] max-w-[300px] w-screen bg-slate-700  rounded-md p-[10px] flex'>
+				<Link to='/' className='text-white w-full text-center underline hover:text-orange-300 transition-colors duration-300'>Вхід для персоналу</Link>
+				
+			</div>
+				<form onSubmit={handelSubmit} className='max-w-[300px] w-full bg-slate-700 p-[20px] rounded-md opacity-[0.97]'>
+			
 				<label className='block mb-1'>
-					<span className='block text-[15px]'>Email</span>
+					<span className='block text-[15px] text-white'>Email</span>
 					<input value={email} onChange={handleOnChangeEmail} type="text" className={`w-full bg-gray-300 rounded-md pt-1 text-[14px] pb-1 pl-3 text-black border-[1px] `} name='email'/>
 				</label>
 				<label className='block mb-3 relative'>
-					<span className='block text-[15px]'>Password</span>
+					<span className='block text-[15px] text-white'>Password</span>
 					<input value={password} onChange={handleOnChangePassword} type={eye ? "text" : "password"} className={`w-full bg-gray-300 rounded-md pt-1 text-[14px] pb-1 pl-3 text-black border-[1px] `} name='password'/>
 					<button onClick={handleEyePassword} type='button' className='absolute top-[30px] right-[10px]'>{eye ?  <FaRegEye/> : <FaRegEyeSlash/>}</button>
 				</label>
@@ -63,7 +69,7 @@ const LoginPage:FC = () => {
 				${isLoading ? "hover:bg-none" : "hover:bg-orange-600"}
 				${isLoading ? "bg-slate-400" : "bg-orange-400 "}
 				pt-1 pb-1 pl-3 pr-3 rounded-md w-1/2  transition-all duration-200 text-white w-full`}>{isLoading ? "Завантажую" : "Увійти"}</button>
-				<Link to='/resetpassword' className='text-white text-center block mt-2 underline'>Забув пароль</Link>
+				<Link to='/resetpassword' className='text-white text-center block mt-2 underline hover:text-orange-300 transition-colors duration-300'>Забув пароль</Link>
 				</form>
 				<div className='absolute z-[-1] opacity-90 w-[330px] h-[330px]'>
 					<img src={shinka} alt="pic" />

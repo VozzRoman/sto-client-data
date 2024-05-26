@@ -1,5 +1,5 @@
 
-interface Tire {
+export interface Tire {
 	width: string;
 	height: string;
 	radius: string;
@@ -48,4 +48,45 @@ export interface InputDataI {
 	discount: string;
 	behavior: string,
 	tiersIssueYears: string,
+}
+
+//tierStorage
+
+export interface StokeInputData {
+	[key: string]: string | number | Tire | undefined;
+      tireModel: string,
+		tireBrend: string,
+		issueYear: string,
+		counts: number | string,
+		inPrice: number | string,
+		outPrice: number | string,
+		tireNotes: string,
+		clientName: string,
+		clientPhone:string,
+		loadIndex: string,
+		dealDate?: string
+	
+}
+
+export interface TireStorageI extends StokeInputData {
+	id?: number
+	tireSize: Tire,
+	tireSpeed: string,
+	tireOwner: string,
+	
+	rating: string,
+}
+
+//Sold
+
+export interface SoldStorageI {
+	id?: number,
+	tireBrend: string,
+	tireModel: string,
+	tireSize: Tire,
+	counts: number | string,
+	outPrice: number | string,
+	revenue: number | string,
+	soldData: string,
+
 }

@@ -12,16 +12,13 @@ const InfoModal:FC<InfoModalProp> = ({children, isOpen, handelModalClose}) => {
 	const handleOutSideClick = <T extends HTMLElement>(e: React.MouseEvent<T>) => {
 		if (e.target === e.currentTarget) {
 		  handelModalClose();
-
 		}
 	 };
-
 	return createPortal (
 		<div onClick={handleOutSideClick} className={classNames(`
 		${isOpen ? "visible" : "invisible"} 
 		${isOpen ? "opacity-100" : "opacity-0"} 
-		fixed top-0 left-0 w-full flex justify-center items-center h-[100%] h-screen bg-slate-300 bg-opacity-75 transition-all duration-500 ease-in-out z-[300]`)}>
-
+		fixed top-0 left-0 w-full p-[15px] flex justify-center items-center h-[100%] h-screen bg-slate-300 bg-opacity-75 transition-all duration-500 ease-in-out z-[300]`)}>
 		{children}
 		</div>,
 		modalRoot

@@ -424,19 +424,19 @@ const handleServiceData_2 = (e: React.ChangeEvent<HTMLSelectElement>, index: num
 	
 			<div className={`
 			${isOpen ? "scale-1" : "scale-0"}
-			relative bg-slate-600 p-[30px] max-w-[800px] w-[100%] rounded-md transition-all duration-500 ease-in-out`}>
+			relative bg-slate-600 p-[30px] max-md:p-[15px] max-w-[800px] w-[100%] rounded-md transition-all duration-500 ease-in-out`}>
 			<button className='absolute top-0 right-0 z-50 m-4' 
 			onClick={handelModalClose}>
 				<MdOutlineClose className='fill-orange-500 hover:fill-orange-400 transition:fill duration-300' 
 				size={25}/>
 			</button>
 			
-			
-		<form onSubmit={handleSubmit} className='text-white'>
+	
+		{/* <form onSubmit={handleSubmit} className='text-white'>
 				<div>
 					<h3 className='text-[20px] border-b-[1px] border-gray-400 mb-[10px] pb-2 text-orange-300 font-semibold'>Оновити дані</h3>
 				<div className='flex mb-1'>
-				{/* ----------------------------------------Car_One------------------------------------------*/}
+			
 				<div className='mb-2 w-1/2 pr-5 border-r-[1px] border-gray-400'>
 					<div className='flex'>
 				<div className='w-1/2 mr-4'>
@@ -498,7 +498,7 @@ const handleServiceData_2 = (e: React.ChangeEvent<HTMLSelectElement>, index: num
 					</div>
 				</div>
 
-				{/* ----------------------------------------Car_tow------------------------------------------*/}
+				
 				<div className='mb-2 w-1/2 pl-5'>
 					<div className='flex'>
 					<div className='w-1/2 mr-4'>
@@ -555,7 +555,7 @@ const handleServiceData_2 = (e: React.ChangeEvent<HTMLSelectElement>, index: num
 
 				</div>
 				</div>
-					{/*------------------------------  Загальна інформація ------------------------- */}
+				
 				<div className='mb-2'>
 				<h3 className='text-center text-[16px] border-b-[1px] border-gray-400 mb-[7px] pb-2'>Загальна інформація</h3>
 					<div className='flex'>
@@ -604,7 +604,7 @@ const handleServiceData_2 = (e: React.ChangeEvent<HTMLSelectElement>, index: num
 					</div>
 				</div>
 
-				{/* ---------------------------------Колеса під Зберігання-------------------------*/}
+				
 				<div className=''>
 				<h3 className='text-center text-[16px] border-b-[1px] border-gray-400 mb-[10px] pb-2'>Колеса під зберігання</h3>
 				<div className='flex'>
@@ -738,7 +738,320 @@ const handleServiceData_2 = (e: React.ChangeEvent<HTMLSelectElement>, index: num
 				text-[16px] mr-[40px] font-semibold text-center w-1/2`}>{error ? error : success }</p>
 				
 				</div>
+			</form> */}
+					<>
+			<h3 className='text-[20px] border-b-[1px] border-gray-400 mb-[10px] pb-2 text-orange-300 font-semibold'>Оновити авто клієнта</h3>
+	
+		<div className={`max-md:h-[340px] 
+		
+		max-md:overflow-y-auto`}>
+		<form onSubmit={handleSubmit} className='text-white pb-5'>
+				<div>
+				
+				<div className='flex mb-1 max-md:block flex-wrap'>
+				{/* ----------------------------------------Car_One------------------------------------------*/}
+				<div className='mb-2 w-1/2 pr-5 border-r-[1px] border-gray-400 max-md:border-r-transparent max-md:border-b-[1px] max-md:pb-3 max-md:pr-0 max-md:w-full'>
+					<div className='flex'>
+				<div className='w-1/2 mr-4 max-md:w-full max-md:mr-0'>
+				<label className='block mb-1'>
+					<span className='block text-[15px]'>Номер Авто</span>
+					<input value={inputData.registrationNumber_1} onChange={handleOnChange} type="text" className={`w-full bg-gray-300 rounded-md pt-1 text-[14px] pb-1 pl-3 text-black border-[1px] `} name='registrationNumber_1'/>
+				</label>
+				<label className='block mb-1'>
+					<span className='block text-[15px] text-red-200'>Назва Авто</span>
+					<input value={inputData.carModel_1} onChange={handleOnChange} type="text" className={`
+					${success === 'Введіть назву авто' ? "border-red-500" : "border-none"}
+					bg-gray-300 w-full rounded-md pt-1 text-[14px] border-[1px] pb-1 pl-3 text-black`} name='carModel_1'/>
+				</label>
+				<label className='block'>
+					<span className='block text-[15px]'>Радіус колес</span>
+					<div className='flex'>
+					<select value={widthTire} onChange={handelOnChangeTireWidth} className={`
+					w-full mr-2 h-[30px] text-[14px] bg-slate-200 rounded-md border-[1px] pt-1 pb-1 pl-1 text-black`} >
+					<option value="">ш</option>
+					{tireWidth.map((item, index) => (
+							<option key={index} value={item}>{item}</option>
+						))}
+					</select>
+					<select value={heightTire} onChange={handelOnChangeTireHeight} className={`
+					w-full mr-2 h-[30px] text-[14px] bg-slate-200 border-[1px] rounded-md pt-1 pb-1 pl-1 text-black`} >
+					<option value="">в</option>
+					{tireHeight.map((item, index) => (
+							<option key={index} value={item}>{item}</option>
+						))}
+					</select>
+					<select value={radiusTire} onChange={handelOnChangeTireRadius} className={`
+					w-full h-[30px] text-[14px] bg-slate-200 border-[1px] rounded-md pt-1 pb-1 pl-1 text-black`}>
+					<option value="">р</option>
+					{tireRadius.map((item, index) => (
+							<option key={index} value={item}>{item}</option>
+						))}
+					</select>
+					</div>
+				</label>
+				</div>
+				<div className='w-1/2 max-md:hidden block'>
+					<label className='w-full'>
+						<p className='text-[15px]'>Об'єм робіт</p>
+						{Array.from({ length: 4 }, (_, i) => (
+							<div key={i} className='flex items-center w-full'>
+							<p className='mr-2'>{i + 1}</p>
+        <select value={serviceData_1[i] || ''} key={i} onChange={(e) => handleServiceData_1(e, i)} className={`
+		  w-full mb-[8.5px] h-[29px] text-[14px] bg-slate-200 border-[1px] rounded-md pt-1 pb-1 pl-1 text-black`}>
+          <option value=""></option>
+          {serviceCar.map((service, index) => (
+            <option key={index} value={service}>{service}</option>
+          ))}
+        </select>
+		  	</div>
+      ))}
+					</label>
+				</div>
+					</div>
+				</div>
+
+				{/* ----------------------------------------Car_tow------------------------------------------*/}
+				<div className='mb-2 w-1/2 pl-5 max-md:pl-0 max-md:w-full'>
+					<div className='flex'>
+					<div className='w-1/2 mr-4 max-md:w-full max-md:mr-0'>
+				<label className='block mb-1'>
+					<span className='block text-[15px]'>Номер Авто_2</span>
+					<input value={inputData.registrationNumber_2} onChange={handleOnChange} type="text" className='bg-gray-300 w-full rounded-md pt-1 text-[14px] pb-1 pl-3 text-black'name='registrationNumber_2'/>
+				</label>
+				<label className='block mb-1'>
+					<span className='block text-[15px]'>Назва Авто_2</span>
+					<input value={inputData.carModel_2} onChange={handleOnChange} type="text" className='bg-gray-300 w-full rounded-md pt-1 text-[14px] pb-1 pl-3 text-black' name='carModel_2'/>
+				</label>
+				<label className='block'>
+					<span className='block text-[15px]'>Радіус колес</span>
+					<div className='flex'>
+					<select value={widthTire_2} onChange={handelOnChangeTireWidth_2} className='w-full mr-2 h-[30px] text-[14px] bg-slate-200 rounded-md pt-1 pb-1 pl-1 text-black' >
+					<option value="">ш</option>
+					{tireWidth.map((item, index) => (
+							<option key={index} value={item}>{item}</option>
+						))}
+					</select>
+					<select value={heightTire_2} onChange={handelOnChangeTireHeight_2} className='w-full mr-2 h-[30px] text-[14px] bg-slate-200 rounded-md pt-1 pb-1 pl-1 text-black' >
+					<option value="">в</option>
+					{tireHeight.map((item, index) => (
+							<option key={index} value={item}>{item}</option>
+						))}
+					</select>
+					<select value={radiusTire_2} onChange={handelOnChangeTireRadius_2} className='w-full h-[30px] text-[14px] bg-slate-200 rounded-md pt-1 pb-1 pl-1 text-black' >
+					<option value="">р</option>
+					{tireRadius.map((item, index) => (
+							<option key={index} value={item}>{item}</option>
+						))}
+					</select>
+					</div>
+				</label>
+					</div>
+					<div className='w-1/2 max-md:hidden block'>
+					<label className='w-full'>
+						<p className='text-[15px]'>Об'єм робіт</p>
+						{Array.from({ length: 4 }, (_, i) => (
+							<div key={i} className='flex items-center w-full'>
+							<p className='mr-2'>{i + 1}</p>
+        <select value={serviceData_2[i] || ''}  key={i} onChange={(e) => handleServiceData_2(e, i)} className='w-full mb-[8.5px] h-[29px] text-[14px] bg-slate-200 rounded-md pt-1 pb-1 pl-1 text-black'>
+          <option value=""></option>
+          {serviceCar.map((service, index) => (
+            <option key={index} value={service}>{service}</option>
+          ))}
+        </select>
+		  	</div>
+      ))}
+					</label>
+				</div>
+					</div>
+				</div>
+
+				</div>
+				</div>
+					{/*------------------------------  Загальна інформація ------------------------- */}
+				<div className='mb-2'>
+				<h3 className='text-center text-[16px] border-b-[1px] border-gray-400 mb-[7px] pb-2'>Загальна інформація</h3>
+					<div className='flex max-md:block flex-wrap'>
+				<div className='w-1/2 max-md:w-full'>
+					<div className='flex'>
+				<label className='block mr-5 w-full'>
+					<span className='block text-[15px]'>Ім'я</span>
+					<input value={inputData.name} onChange={handleOnChange} type="text" className={`
+					bg-gray-300 w-full text-[14px] rounded-md border-[1px] pt-1 pb-1 pl-3 text-black h-[29px]`} name='name'/>
+				</label>
+				<label className='block mb-2 mr-5 w-1/4'>
+					<span className='block text-[15px]'>Знижка</span>
+					<input value={inputData.discount} onChange={handleOnChange} type="text" className='bg-gray-300 w-full text-[14px] rounded-md pt-1 pb-1 pl-3 text-black' name='discount'/>
+				</label>
+				<label className='block mr-5 max-md:mr-0 mb-2'>
+					<span className='block text-[15px] whitespace-nowrap'>Як людина</span>
+					<input value={inputData.behavior} onChange={handleOnChange} type="number" className={`
+					bg-gray-300 text-[14px] h-[29px] w-full border-[1px] rounded-md pt-1 pb-1 pl-3 text-black`} name='behavior'/>
+				</label>
+					</div>
+					
+				
+				<label className='block mb-2 mr-5 max-md:mr-0'>
+					<span className='block text-[15px]'> Недоліки авто</span>
+					<input value={inputData.carFlaws} onChange={handleOnChange} type="text" className='bg-gray-300 text-[14px] w-full rounded-md pt-1 pb-1 pl-3 text-black' name='carFlaws'/>
+				</label>
+				</div>
+				<div className='w-1/2 pl-5 max-md:pl-0 max-md:w-full'>
+				<label className='block mb-2'>
+					<span className='block text-[15px] text-red-200'>Основний Телефон_1</span>
+					<InputMask value={inputData.phone_1} suppressContentEditableWarning mask="9999999999" placeholder="0505005005" onChange={handleOnChange} type="text" className={`
+					${success === "Введіть телефон кліента" ? "border-red-500" : "border-none"}
+					bg-gray-300 text-[14px] w-full rounded-md border-[1px] pt-1 pb-1 pl-3 text-black`}name='phone_1'/>
+				</label>
+				<div className='flex justify-between'>
+				<label className='block mb-2 max-md:mr-3 max-md:w-1/2'>
+					<span className='block text-[15px]'>Телефон_2</span>
+					<InputMask value={inputData.phone_2} suppressContentEditableWarning mask="9999999999" placeholder="0505005005" onChange={handleOnChange} type="text" className='bg-gray-300 text-[14px] w-full rounded-md pt-1 pb-1 pl-3 text-black' name='phone_2'/>
+				</label>
+				<label className='block mb-2 max-md:w-1/2'>
+					<span className='block text-[15px]'>Телефон_3</span>
+					<InputMask value={inputData.phone_3} suppressContentEditableWarning mask="9999999999" placeholder="0505005005" onChange={handleOnChange} type="text" className='bg-gray-300 text-[14px] w-full rounded-md pt-1 pb-1 pl-3 text-black' name='phone_3'/>
+				</label>
+				</div>
+				</div>
+					</div>
+				</div>
+
+				{/* ---------------------------------Колеса під Зберігання-------------------------*/}
+				<div className=''>
+				<h3 className='text-center text-[16px] border-b-[1px] border-gray-400 mb-[10px] pb-2'>Колеса під зберігання</h3>
+				<div className='flex max-md:block flex-wrap max-md:w-full'>
+					<div className='w-1/2 max-sm:w-full'>
+
+			<div className='flex max-md:w-full'>
+		<label className='mb-2 mr-5 max-md:mr-3 max-md:w-1/2'>
+      <h2 className='text-[15px] truncate max-w-[50px]'>Дата прийняття</h2>
+      <DatePicker
+		className='text-black text-[14px] pt-1 pb-1 pl-2 w-full rounded-md'
+        selected={selectedDate as Date || undefined}
+        onChange={handleDateChange}
+        dateFormat="dd/MM/yyyy" // Формат даты, можно настроить по своему усмотрению
+        placeholderText="прийняття"
+      />
+    	</label>
+		 <label className='block mr-5 max-md:mr-0'>
+					<span className={`
+					${!selectedDate ? 'text-white' : 'text-red-200'}
+					block text-[15px] max-md:full`}>Марка</span>
+					<input value={inputData.tireBrend} onChange={handleOnChange} type="text" className={`
+					${success === "Введіть марку колес" ? "border-red-500" : "border-none"}
+					bg-gray-300 text-[14px] w-full rounded-md border-[1px] pt-1 pb-1 pl-3 text-black`} name='tireBrend'/>
+				</label>
+
+		 	</div>
+		
+					<div className='flex'>
+					<label className='mb-2 mr-5 max-md:mr-3 max-md:w-1/2'>
+      <h2 className='text-[15px]'>Дата видачі</h2>
+      <DatePicker
+		className='text-black text-[14px] pt-1 pb-1 pl-2 w-full rounded-md'
+        selected={selecteEndDate as Date || undefined}
+        onChange={handleEndDateChange}
+        dateFormat="dd/MM/yyyy" // Формат даты, можно настроить по своему усмотрению
+        placeholderText="видачі"
+		 
+      />
+    	</label>
+				<label className='block mr-5 max-md:mr-0'>
+					<span className={`
+					${!selectedDate ? 'text-white' : 'text-red-200'}
+					block text-[15px]`}>Рік випуску</span>
+					<input value={inputData.tiersIssueYears} onChange={handleOnChange} type="text" className={`
+					${success === "Введіть рік випуску колес" ? "border-red-500" : "border-none"}
+					bg-gray-300 text-[14px] w-full border-[1px] rounded-md pt-1 pb-1 pl-3 text-black`} name='tiersIssueYears'/>
+				</label>
+					</div>
+					</div>
+					<div className='w-1/2 max-md:w-full'>
+				<label className='block mb-2'>
+					<span className={`
+					${!selectedDate ? 'text-white' : 'text-red-200'}
+					block text-[15px]`}>Кількість та радіус колес</span>
+					<div className='flex'>
+					<label className='block mr-5 max-md:mr-2'>
+					<input value={inputData.tiersValue} placeholder='шт.' onChange={handleOnChange} type="text" className={`
+					${success === "Введіть кількість колес" ? "border-red-500" : "border-none"}
+					bg-gray-300 text-[14px] w-full border-[1px] rounded-md pt-1 pb-1 pl-2 text-black`} name='tiersValue'/>
+				</label>
+					<select value={widthStorage} onChange={handleOnChangeTireStorageWidth} className={`
+					${success === "Введіть довжину колес" ? "border-red-500" : "border-none"}
+					w-full text-[14px] mr-4 h-[29px] border-[1px] bg-slate-200 rounded-md pt-1 pb-1 pl-3 text-black`} >
+					<option value="">/</option>
+					{tireWidth.map((item, index) => (
+							<option key={index} value={item}>{item}</option>
+						))}
+					</select>
+					<select value={heightStorage} onChange={handleOnChangeTireStorageHeight} className={`
+					${success === "Введіть ширину колес" ? "border-red-500" : "border-none"}
+					w-full text-[14px] mr-4 h-[29px] bg-slate-200 border-[1px] rounded-md pt-1 pb-1 pl-3 text-black`} >
+					<option value="">/</option>
+					{tireHeight.map((item, index) => (
+							<option key={index} value={item}>{item}</option>
+						))}
+					</select>
+					<select value={radiusStorage} onChange={handleOnChangeTireStorageRadius} className={`
+					${success === "Введіть радіус колес" ? "border-red-500" : "border-none"}
+					w-full text-[14px] h-[29px] bg-slate-200 border-[1px] rounded-md pt-1 pb-1 pl-3 text-black`}>
+					<option value="">/</option>
+					{tireRadius.map((item, index) => (
+							<option key={index} value={item}>{item}</option>
+						))}
+					</select>
+					</div>
+				</label>
+						<label className='block mb-2'>
+					<span className='block text-[15px]'>Кількість та радіус колес_2</span>
+					<div className='flex'>
+					<label className='block mr-5 max-md:mr-2'>
+					<input value={inputData.tiersValue_2} placeholder='шт.' onChange={handleOnChange} type="text" className='bg-gray-300 w-full text-[14px] rounded-md pt-1 pb-1 pl-2 text-black' name='tiersValue_2'/>
+				</label>
+					<select value={widthStorage_2} onChange={handleOnChangeTireStorageWidth_2} className='w-full text-[14px] mr-4 h-[29px] bg-slate-200 rounded-md pt-1 pb-1 pl-3 text-black' >
+					<option value="">/</option>
+					{tireWidth.map((item, index) => (
+							<option key={index} value={item}>{item}</option>
+						))}
+					</select>
+					<select value={heightStorage_2} onChange={handleOnChangeTireStorageHeight_2} className='w-full text-[14px] mr-4 h-[29px] bg-slate-200 rounded-md pt-1 pb-1 pl-3 text-black' >
+					<option value="">/</option>
+					{tireHeight.map((item, index) => (
+							<option key={index} value={item}>{item}</option>
+						))}
+					</select>
+					<select value={radiusStorage_2} onChange={handleOnChangeTireStorageRadius_2} className='w-full text-[14px] h-[29px] bg-slate-200 rounded-md pt-1 pb-1 pl-3 text-black'>
+					<option value="">/</option>
+					{tireRadius.map((item, index) => (
+							<option key={index} value={item}>{item}</option>
+						))}
+					</select>
+					</div>
+				</label>
+					</div>
+				</div>
+				</div>
+				<label className='block mb-2'>
+					<span className='block text-[15px]'>Замітки для колес</span>
+					<input value={inputData.tireFlawStore} onChange={handleOnChange} type="text" className='bg-gray-300 w-full rounded-md pt-1 pb-1 pl-3 text-black' name='tireFlawStore'/>
+				</label>
+				<div className='flex mt-3 justify-start items-center max-sm:block'>
+					
+				<button disabled={isLoading} type='submit' className={`
+				${isLoading ? "hover:bg-none" : "hover:bg-orange-600"}
+				${isLoading ? "bg-slate-400" : "bg-orange-400 "}
+				pt-1 pb-1 pl-3 pr-3 rounded-md w-1/2  transition-all duration-200  max-sm:w-full`}>{isLoading ? "Завантажую" : "Оновити"}</button>
+				{isLoading && <div className='w-1/2 flex justify-center max-sm:w-full max-sm:p-3'><Loader/></div>}
+				<p className={`
+				${error ? 'text-red-300 ' : 'text-orange-300'}
+				
+				text-[16px] mr-[40px] font-semibold text-center w-1/2 max-sm:w-full`}>{error ? error : success }</p>
+				</div>
 			</form>
+		</div>
+		</>
+	
 			</div>
 	);
 };

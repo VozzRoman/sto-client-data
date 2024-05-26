@@ -10,11 +10,9 @@ import { AuthProvider } from './hooks/AuthContext.tsx'
 ReactDOM.createRoot(document.getElementById('root')!).render(
 <AuthProvider>
 	<Provider store={store}>
-	<BrowserRouter>
-  
+		<BrowserRouter>
     <App />
- 
-  </BrowserRouter>
+  		</BrowserRouter>
   </Provider>
   </AuthProvider>
 )

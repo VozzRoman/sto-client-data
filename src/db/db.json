@@ -1,103 +1,6 @@
 {
   "clients": [
     {
-      "registrationNumber_1": "TR5678FF",
-      "carModel_1": "Mazda",
-      "tire_1": {
-        "width": "175",
-        "height": "50",
-        "radius": "16"
-      },
-      "tire_2": {
-        "width": "155",
-        "height": "35",
-        "radius": "15"
-      },
-      "registrationNumber_2": "FF7777RR",
-      "carModel_2": "Gaz",
-      "phone_1": "+38 (934) 569-09-00",
-      "phone_2": "+38 (987) 678-00-00",
-      "phone_3": "",
-      "name": "Беня2",
-      "discount": "30",
-      "tiresValue": "3",
-      "tiresValue_2": "3",
-      "tiersIssueYears": "2019",
-      "dataStorage": "2024-05-15",
-      "endDataStorage": "",
-      "character": "2",
-      "carFlaws": "шось там погане!!!!",
-      "tireFlawStore": "",
-      "tireBrend": "Yokohama",
-      "tireStorage": {
-        "width": "145",
-        "height": "25",
-        "radius": "14"
-      },
-      "tireStorage_2": {
-        "width": "",
-        "height": "",
-        "radius": ""
-      },
-      "serviceCar_1": [
-        "додаткові б/г",
-        "зняття/балансування",
-        "перобувка 4-х коліс",
-        "MT/AT"
-      ],
-      "serviceCar_2": [
-        "Run Flat",
-        "перобувка 4-х коліс"
-      ],
-      "id": "7f43"
-    },
-    {
-      "registrationNumber_1": "АТ45777КИ",
-      "carModel_1": "Toyota Camry",
-      "tire_1": {
-        "width": "175",
-        "height": "40",
-        "radius": "14"
-      },
-      "tire_2": {
-        "width": "",
-        "height": "",
-        "radius": ""
-      },
-      "registrationNumber_2": "",
-      "carModel_2": "",
-      "phone_1": "+38 (097) 778-76-76",
-      "phone_2": "",
-      "phone_3": "",
-      "name": " Наташа",
-      "discount": "10",
-      "tiresValue": "4",
-      "tiresValue_2": "4",
-      "tiersIssueYears": "2014",
-      "dataStorage": "",
-      "endDataStorage": "",
-      "character": 4,
-      "carFlaws": "ржаві гайки та погані колеса",
-      "tireFlawStore": "",
-      "tireBrend": "Yokohama",
-      "tireStorage": {
-        "width": "185",
-        "height": "40",
-        "radius": "15"
-      },
-      "tireStorage_2": {
-        "width": "",
-        "height": "",
-        "radius": ""
-      },
-      "serviceCar_1": [
-        "перобувка 4-х коліс",
-        "додаткові б/г"
-      ],
-      "serviceCar_2": [],
-      "id": "fdeb"
-    },
-    {
       "registrationNumber_1": "AA4578RR",
       "carModel_1": "Ford2",
       "tire_1": {
@@ -198,96 +101,6 @@
       "id": "c3d0"
     },
     {
-      "registrationNumber_1": "AE5690RM",
-      "carModel_1": "WV Golf",
-      "tire_1": {
-        "width": "165",
-        "height": "35",
-        "radius": "15"
-      },
-      "tire_2": {
-        "width": "",
-        "height": "",
-        "radius": ""
-      },
-      "registrationNumber_2": "",
-      "carModel_2": "",
-      "phone_1": "+38 (934) 679-99-10",
-      "phone_2": "",
-      "phone_3": "",
-      "name": "Толя",
-      "discount": "",
-      "tiresValue": "",
-      "tiresValue_2": "",
-      "tiersIssueYears": "",
-      "dataStorage": "",
-      "endDataStorage": "",
-      "character": 4,
-      "carFlaws": "",
-      "tireFlawStore": "",
-      "tireBrend": "",
-      "tireStorage": {
-        "width": "",
-        "height": "",
-        "radius": ""
-      },
-      "tireStorage_2": {
-        "width": "",
-        "height": "",
-        "radius": ""
-      },
-      "serviceCar_1": [
-        "додаткові б/г"
-      ],
-      "serviceCar_2": [],
-      "id": "580c"
-    },
-    {
-      "id": "f5b3",
-      "registrationNumber_1": "AA6680MM",
-      "carModel_1": "Porsh Panamero",
-      "tire_1": {
-        "width": "175",
-        "height": "35",
-        "radius": "15"
-      },
-      "tire_2": {
-        "width": "",
-        "height": "",
-        "radius": ""
-      },
-      "registrationNumber_2": "",
-      "carModel_2": "",
-      "phone_1": "+38 (934) 569-09-00",
-      "phone_2": "",
-      "phone_3": "",
-      "name": "Толя",
-      "discount": "",
-      "tiresValue": "",
-      "tiresValue_2": "",
-      "tiersIssueYears": "",
-      "dataStorage": "",
-      "endDataStorage": "",
-      "character": 10,
-      "carFlaws": "",
-      "tireFlawStore": "",
-      "tireBrend": "",
-      "tireStorage": {
-        "width": "",
-        "height": "",
-        "radius": ""
-      },
-      "tireStorage_2": {
-        "width": "",
-        "height": "",
-        "radius": ""
-      },
-      "serviceCar_1": [
-        "зняття/балансування"
-      ],
-      "serviceCar_2": []
-    },
-    {
       "id": "5ccf",
       "registrationNumber_1": "WE7689QW",
       "carModel_1": "BMW",
@@ -378,7 +191,6 @@
       "id": "fdf2"
     },
     {
-      "id": "f8f0",
       "registrationNumber_1": "AA5678NM",
       "carModel_1": "Volvo",
       "tire_1": {
@@ -421,100 +233,8 @@
         "перобувка 4-х коліс",
         ""
       ],
-      "serviceCar_2": []
-    },
-    {
-      "id": "6a8e",
-      "registrationNumber_1": "test1",
-      "carModel_1": "test1",
-      "tire_1": {
-        "width": "155",
-        "height": "30",
-        "radius": "14"
-      },
-      "tire_2": {
-        "width": "145",
-        "height": "30",
-        "radius": "13"
-      },
-      "registrationNumber_2": "test1",
-      "carModel_2": "test1",
-      "phone_1": "+38 (934) 569-09-00",
-      "phone_2": "+38 (987) 678-00-00",
-      "phone_3": "+38 (908) 900-09-89",
-      "name": "Роман Вознюк",
-      "discount": "30",
-      "tiresValue": "3",
-      "tiresValue_2": "3",
-      "tiersIssueYears": "2018",
-      "dataStorage": "2024-05-15",
-      "endDataStorage": "",
-      "character": "3",
-      "carFlaws": "ржаві гайки та погані колеса",
-      "tireFlawStore": "латки sdfsdfsdfsdfsd sdfsdfsdfsd sdfsdfsdf sdsdfsdf sdsdfsdf",
-      "tireBrend": "Pirreli",
-      "tireStorage": {
-        "width": "145",
-        "height": "35",
-        "radius": "14"
-      },
-      "tireStorage_2": {
-        "width": "145",
-        "height": "25",
-        "radius": "13"
-      },
-      "serviceCar_1": [
-        "перобувка 4-х коліс"
-      ],
-      "serviceCar_2": [
-        "перобувка 4-х коліс"
-      ]
-    },
-    {
-      "id": "bfb7",
-      "registrationNumber_1": "test2",
-      "carModel_1": "test2",
-      "tire_1": {
-        "width": "155",
-        "height": "30",
-        "radius": "14"
-      },
-      "tire_2": {
-        "width": "145",
-        "height": "30",
-        "radius": "13"
-      },
-      "registrationNumber_2": "test2",
-      "carModel_2": "test2",
-      "phone_1": "+38 (934) 569-09-00",
-      "phone_2": "",
-      "phone_3": "",
-      "name": "test2",
-      "discount": "10",
-      "tiresValue": "",
-      "tiresValue_2": "",
-      "tiersIssueYears": "",
-      "dataStorage": "",
-      "endDataStorage": "",
-      "character": "4",
-      "carFlaws": "",
-      "tireFlawStore": "",
-      "tireBrend": "",
-      "tireStorage": {
-        "width": "",
-        "height": "",
-        "radius": ""
-      },
-      "tireStorage_2": {
-        "width": "",
-        "height": "",
-        "radius": ""
-      },
-      "serviceCar_1": [
-        "перобувка 4-х коліс",
-        ""
-      ],
-      "serviceCar_2": []
+      "serviceCar_2": [],
+      "id": "f8f0"
     },
     {
       "id": "e65e",
@@ -697,7 +417,6 @@
       "serviceCar_2": []
     },
     {
-      "id": "123e65e",
       "registrationNumber_1": "test2",
       "carModel_1": "test2",
       "tire_1": {
@@ -739,7 +458,8 @@
       "serviceCar_1": [
         "перобувка 4-х коліс"
       ],
-      "serviceCar_2": []
+      "serviceCar_2": [],
+      "id": "123e65e"
     },
     {
       "id": "e65e000000",
@@ -833,7 +553,6 @@
       "serviceCar_2": []
     },
     {
-      "id": "78e3",
       "registrationNumber_1": "RY2345FM",
       "carModel_1": "Ford",
       "tire_1": {
@@ -876,7 +595,8 @@
         "перобувка 4-х коліс",
         "зняття/балансування"
       ],
-      "serviceCar_2": []
+      "serviceCar_2": [],
+      "id": "78e3"
     },
     {
       "id": "f01e",
@@ -1289,21 +1009,22 @@
       "id": "5328"
     },
     {
+      "id": "b9ab",
       "registrationNumber_1": "",
-      "carModel_1": "Mazda",
+      "carModel_1": "Mersedes ",
       "tire_1": {
         "width": "",
         "height": "",
-        "radius": "16"
+        "radius": ""
       },
       "tire_2": {
-        "width": "155",
-        "height": "35",
-        "radius": "17"
+        "width": "",
+        "height": "",
+        "radius": ""
       },
       "registrationNumber_2": "",
-      "carModel_2": "Opel",
-      "phone_1": "0997855555",
+      "carModel_2": "",
+      "phone_1": "0934456789",
       "phone_2": "",
       "phone_3": "",
       "name": "",
@@ -1328,16 +1049,16 @@
         "radius": ""
       },
       "serviceCar_1": [],
-      "serviceCar_2": [],
-      "id": "918c"
+      "serviceCar_2": []
     },
     {
+      "id": "8f39",
       "registrationNumber_1": "",
-      "carModel_1": "Тесла",
+      "carModel_1": "Mazda",
       "tire_1": {
         "width": "",
         "height": "",
-        "radius": "17"
+        "radius": ""
       },
       "tire_2": {
         "width": "",
@@ -1346,24 +1067,24 @@
       },
       "registrationNumber_2": "",
       "carModel_2": "",
-      "phone_1": "0957804444",
+      "phone_1": "0957800055",
       "phone_2": "",
       "phone_3": "",
       "name": "",
       "discount": "",
-      "tiresValue": "",
+      "tiresValue": "4",
       "tiresValue_2": "",
-      "tiersIssueYears": "",
-      "dataStorage": "",
+      "tiersIssueYears": "2018",
+      "dataStorage": "2024-05-08",
       "endDataStorage": "",
-      "character": "4",
-      "carFlaws": "sdfsdfsdfsdfsd sdfsdfsdfsd sdfsdfsdf sdsdfsdf sdsdfsdf",
-      "tireFlawStore": "латки sdfsdfsdfsdfsd sdfsdfsdfsd sdfsdfsdf sdsdfsdf sdsdfsdf",
-      "tireBrend": "",
+      "character": "",
+      "carFlaws": "",
+      "tireFlawStore": "",
+      "tireBrend": "Pirreli",
       "tireStorage": {
-        "width": "",
-        "height": "",
-        "radius": ""
+        "width": "265",
+        "height": "65",
+        "radius": "17"
       },
       "tireStorage_2": {
         "width": "",
@@ -1371,27 +1092,538 @@
         "radius": ""
       },
       "serviceCar_1": [],
-      "serviceCar_2": [],
-      "id": "a684"
+      "serviceCar_2": []
     }
   ],
-  "selectAction": [
+  "tiresStore": [
     {
-      "character": [
-        "норм",
-        "не дуже",
-        "рреДиска"
-      ],
-      "carFlaws": [
-        "ржаві гайки",
-        "корито",
-        "нема колес"
-      ],
-      "whellStor": [
-        "не здав",
-        "здав"
-      ],
-      "id": "40dc"
+      "tireModel": "WE-3420",
+      "tireBrend": "Yokohama",
+      "issueYear": "2012",
+      "clientPhone": "",
+      "counts": 1,
+      "inPrice": 2100,
+      "clientName": "",
+      "outPrice": 2400,
+      "tireNotes": "",
+      "loadIndex": "67",
+      "tireSize": {
+        "width": "165",
+        "height": "35",
+        "radius": "16"
+      },
+      "tireSpeed": "L",
+      "rating": "на сезон",
+      "tireOwner": "Фірма",
+      "id": "9932"
+    },
+    {
+      "tireModel": "WE-340456",
+      "tireBrend": "Amway2",
+      "issueYear": "2013",
+      "clientPhone": "2342565756",
+      "counts": 2,
+      "inPrice": 2400,
+      "clientName": "Bob2",
+      "outPrice": 2100,
+      "tireNotes": "",
+      "loadIndex": "67",
+      "tireSize": {
+        "width": "195",
+        "height": "35",
+        "radius": "19"
+      },
+      "tireSpeed": "Q",
+      "rating": "на сезон",
+      "tireOwner": "Фірма",
+      "id": "ec3e"
+    },
+    {
+      "tireModel": "ZE-340456",
+      "tireBrend": "Yokohama",
+      "issueYear": "2018",
+      "clientPhone": "4353333333",
+      "counts": 14,
+      "inPrice": 3400,
+      "clientName": "Gonzo",
+      "outPrice": 4000,
+      "tireNotes": "",
+      "loadIndex": "89",
+      "tireSize": {
+        "width": "175",
+        "height": "35",
+        "radius": "16"
+      },
+      "tireSpeed": "L",
+      "rating": "на сезон",
+      "tireOwner": "Фірма",
+      "id": "ecbd",
+      "dealDate": "18.05.2024, 17:39:58"
+    },
+    {
+      "tireModel": "ZE-340456",
+      "tireBrend": "Yokohama12",
+      "issueYear": "2018",
+      "clientPhone": "3456789900",
+      "counts": 8,
+      "inPrice": 2300,
+      "clientName": "Geka",
+      "outPrice": 2300,
+      "tireNotes": "Гарна резина в дуже гарному стані",
+      "loadIndex": "77",
+      "tireSize": {
+        "width": "175",
+        "height": "35",
+        "radius": "15"
+      },
+      "tireSpeed": "Q",
+      "rating": "нормальні",
+      "tireOwner": "Фірма",
+      "id": "99eb"
+    },
+    {
+      "tireModel": "DF-345",
+      "tireBrend": "Toyo222",
+      "issueYear": "2018",
+      "clientPhone": "3453453465",
+      "counts": 2,
+      "inPrice": 2400,
+      "clientName": "Жека",
+      "outPrice": 5000,
+      "tireNotes": "Гарна резина в дуже гарному стані",
+      "loadIndex": "56",
+      "tireSize": {
+        "width": "175",
+        "height": "40",
+        "radius": "15"
+      },
+      "tireSpeed": "Q",
+      "rating": "на сезон",
+      "tireOwner": "Фірма",
+      "id": "1f7e"
+    },
+    {
+      "id": "547d",
+      "tireModel": "XP-3456",
+      "tireBrend": "Delux",
+      "issueYear": "2013",
+      "clientPhone": "3434534534",
+      "counts": 3,
+      "inPrice": 3400,
+      "clientName": "Defak",
+      "outPrice": 4600,
+      "tireNotes": "Гарна резина в дуже гарному стані",
+      "loadIndex": "67",
+      "tireSize": {
+        "width": "165",
+        "height": "30",
+        "radius": "15"
+      },
+      "tireSpeed": "M",
+      "rating": "на сезон",
+      "tireOwner": "Фірма",
+      "dealDate": "19.05.2024, 15:18:26"
+    },
+    {
+      "tireModel": "DF-345",
+      "tireBrend": "Amway",
+      "issueYear": "2015",
+      "clientPhone": "4353333333",
+      "counts": 2,
+      "inPrice": 2500,
+      "clientName": "Bob2",
+      "outPrice": 3500,
+      "tireNotes": "",
+      "loadIndex": "89",
+      "tireSize": {
+        "width": "175",
+        "height": "40",
+        "radius": "16"
+      },
+      "tireSpeed": "N",
+      "rating": "на доехать",
+      "tireOwner": "Фірма",
+      "id": "5515",
+      "dealDate": "19.05.2024, 15:21:41"
+    },
+    {
+      "tireModel": "DF-345",
+      "tireBrend": "Пирклли2222",
+      "issueYear": "2012",
+      "clientPhone": "3453453453",
+      "counts": 20,
+      "inPrice": 2400,
+      "clientName": "Anton",
+      "outPrice": 2400,
+      "tireNotes": "",
+      "loadIndex": "77",
+      "tireSize": {
+        "width": "185",
+        "height": "40",
+        "radius": "16"
+      },
+      "tireSpeed": "M",
+      "rating": "нормальні",
+      "tireOwner": "Фірма",
+      "id": "e0a2",
+      "dealDate": "2024-05-19"
+    },
+    {
+      "tireModel": "WE-3420",
+      "tireBrend": "Toyo",
+      "issueYear": "2012",
+      "clientPhone": "",
+      "counts": 3,
+      "inPrice": 2300,
+      "clientName": "",
+      "outPrice": 2500,
+      "tireNotes": "Гарна резина в дуже гарному стані sdfgdfgdgdfgdgd dfgdfgdfgdfgdf dfgdfgdfgdfgdf dfgdfgdfgdfg dfdfg",
+      "loadIndex": "67",
+      "tireSize": {
+        "width": "225",
+        "height": "40",
+        "radius": "16"
+      },
+      "tireSpeed": "M",
+      "rating": "на сезон",
+      "tireOwner": "Шиномонтаж",
+      "id": "59d6"
+    },
+    {
+      "tireModel": "DF-34532",
+      "tireBrend": "Dunfill",
+      "issueYear": "2024",
+      "clientPhone": "2342223444",
+      "counts": 4,
+      "inPrice": 2400,
+      "clientName": "Ronaldo",
+      "outPrice": 2700,
+      "tireNotes": "",
+      "loadIndex": "89",
+      "tireSize": {
+        "width": "205",
+        "height": "45",
+        "radius": "18"
+      },
+      "tireSpeed": "P",
+      "rating": "на сезон",
+      "tireOwner": "Фірма",
+      "id": "8cfb",
+      "dealDate": "2024-05-19"
+    },
+    {
+      "tireModel": "WE-3420",
+      "tireBrend": "Pirreli",
+      "issueYear": "2024",
+      "clientPhone": "4455666778",
+      "counts": 2,
+      "inPrice": 2100,
+      "clientName": "Anton",
+      "outPrice": 2400,
+      "tireNotes": "",
+      "loadIndex": "67",
+      "tireSize": {
+        "width": "165",
+        "height": "40",
+        "radius": "16"
+      },
+      "tireSpeed": "M",
+      "rating": "на сезон",
+      "tireOwner": "Фірма",
+      "id": "a13c",
+      "dealDate": "2024-05-21"
+    },
+    {
+      "tireModel": "rt6578",
+      "tireBrend": "Yokohama",
+      "issueYear": "2016",
+      "clientPhone": "3453453453",
+      "counts": 4,
+      "inPrice": 2700,
+      "clientName": "Bob2",
+      "outPrice": 2700,
+      "tireNotes": "",
+      "loadIndex": "67",
+      "tireSize": {
+        "width": "195",
+        "height": "35",
+        "radius": "14"
+      },
+      "tireSpeed": "L",
+      "rating": "на сезон",
+      "tireOwner": "Фірма",
+      "id": "76e7"
+    },
+    {
+      "id": "f7c9",
+      "tireModel": "WE-3420",
+      "tireBrend": "Yokohama",
+      "issueYear": "2012",
+      "clientPhone": "4545645646",
+      "counts": 23,
+      "inPrice": 2100,
+      "clientName": "Bob",
+      "outPrice": 2300,
+      "tireNotes": "",
+      "loadIndex": "56",
+      "tireSize": {
+        "width": "175",
+        "height": "30",
+        "radius": "15"
+      },
+      "tireSpeed": "M",
+      "rating": "на сезон",
+      "tireOwner": "Власник"
+    },
+    {
+      "id": "1418",
+      "tireModel": "ZE-340456",
+      "tireBrend": "Priellt",
+      "issueYear": "2012",
+      "clientPhone": "2234234234",
+      "counts": 3,
+      "inPrice": 2400,
+      "clientName": "Игдшт",
+      "outPrice": 2600,
+      "tireNotes": "",
+      "loadIndex": "67",
+      "tireSize": {
+        "width": "165",
+        "height": "35",
+        "radius": "16"
+      },
+      "tireSpeed": "L",
+      "rating": "на сезон",
+      "tireOwner": "Власник"
+    },
+    {
+      "id": "214a",
+      "tireModel": "WE-3420",
+      "tireBrend": "Yokohama",
+      "issueYear": "2012",
+      "clientPhone": "",
+      "counts": 12,
+      "inPrice": 1200,
+      "clientName": "",
+      "outPrice": 1400,
+      "tireNotes": "",
+      "loadIndex": "67",
+      "tireSize": {
+        "width": "165",
+        "height": "30",
+        "radius": "13"
+      },
+      "tireSpeed": "L",
+      "rating": "нормальні",
+      "tireOwner": "Шиномонтаж"
+    },
+    {
+      "id": "c165",
+      "tireModel": "WE-3420",
+      "tireBrend": "Yokohama",
+      "issueYear": "2012",
+      "clientPhone": "4566656754",
+      "counts": 16,
+      "inPrice": 2300,
+      "clientName": "Geka",
+      "outPrice": 2500,
+      "tireNotes": "",
+      "loadIndex": "34",
+      "tireSize": {
+        "width": "175",
+        "height": "25",
+        "radius": "15"
+      },
+      "tireSpeed": "L",
+      "rating": "на сезон",
+      "tireOwner": "Шиномонтаж",
+      "dealDate": "2024-05-22"
+    },
+    {
+      "id": "0fce",
+      "tireModel": "WE-3420",
+      "tireBrend": "Yokohama",
+      "issueYear": "2012",
+      "clientPhone": "",
+      "counts": 7,
+      "inPrice": 2300,
+      "clientName": "",
+      "outPrice": 2700,
+      "tireNotes": "Гарна резина в дуже гарному стані",
+      "loadIndex": "56",
+      "tireSize": {
+        "width": "165",
+        "height": "30",
+        "radius": "14"
+      },
+      "tireSpeed": "K",
+      "rating": "на сезон",
+      "tireOwner": "Шиномонтаж"
+    },
+    {
+      "id": "0ebe",
+      "tireModel": "WE-3420",
+      "tireBrend": "Yokohama",
+      "issueYear": "2012",
+      "clientPhone": "",
+      "counts": 0,
+      "inPrice": 3400,
+      "clientName": "",
+      "outPrice": 4000,
+      "tireNotes": "",
+      "loadIndex": "67",
+      "tireSize": {
+        "width": "165",
+        "height": "30",
+        "radius": "13"
+      },
+      "tireSpeed": "K",
+      "rating": "на сезон",
+      "tireOwner": "Шиномонтаж"
+    },
+    {
+      "tireModel": "Dupel",
+      "tireBrend": "Mklaren",
+      "issueYear": "2014",
+      "clientPhone": "",
+      "counts": 38,
+      "inPrice": 2300,
+      "clientName": "",
+      "outPrice": 2500,
+      "tireNotes": "Dfhjhfghj",
+      "loadIndex": "55",
+      "tireSize": {
+        "width": "165",
+        "height": "35",
+        "radius": "14"
+      },
+      "tireSpeed": "M",
+      "rating": "на сезон",
+      "tireOwner": "Шиномонтаж",
+      "id": "e437"
+    },
+    {
+      "tireModel": "Xc-345",
+      "tireBrend": "Dunlop",
+      "issueYear": "2014",
+      "clientPhone": "0934778900",
+      "counts": 4,
+      "inPrice": 2500,
+      "clientName": "Anton",
+      "outPrice": 2600,
+      "tireNotes": "Fgjkkh hiking hjkkjg hjj",
+      "loadIndex": "67",
+      "tireSize": {
+        "width": "175",
+        "height": "45",
+        "radius": "17"
+      },
+      "tireSpeed": "L",
+      "rating": "нормальні",
+      "tireOwner": "Шиномонтаж",
+      "id": "4d38",
+      "dealDate": "2024-05-23"
+    },
+    {
+      "tireModel": "ZE-340456",
+      "tireBrend": "Yokohama",
+      "issueYear": "2018",
+      "clientPhone": "4564564564",
+      "counts": 12,
+      "inPrice": 3400,
+      "clientName": "Gonzo34",
+      "outPrice": 3600,
+      "tireNotes": "",
+      "loadIndex": "77",
+      "tireSize": {
+        "width": "165",
+        "height": "40",
+        "radius": "16"
+      },
+      "tireSpeed": "M",
+      "rating": "на сезон",
+      "tireOwner": "Шиномонтаж",
+      "id": "2edc",
+      "dealDate": "2024-05-26"
+    },
+    {
+      "tireModel": "WE-3420",
+      "tireBrend": "Yokohama",
+      "issueYear": "2015",
+      "clientPhone": "2455545454",
+      "counts": 34,
+      "inPrice": 3400,
+      "clientName": "Богдан",
+      "outPrice": 3800,
+      "tireNotes": "dfgdfgdfgdfgdfgdfg",
+      "loadIndex": "89",
+      "tireSize": {
+        "width": "255",
+        "height": "70",
+        "radius": "18"
+      },
+      "tireSpeed": "S",
+      "rating": "на сезон",
+      "tireOwner": "Реалізація",
+      "id": "5263"
+    },
+    {
+      "tireModel": "WE-3420",
+      "tireBrend": "Pirreli",
+      "issueYear": "2018",
+      "clientPhone": "",
+      "counts": 4,
+      "inPrice": 2600,
+      "clientName": "",
+      "outPrice": 3600,
+      "tireNotes": "",
+      "loadIndex": "67",
+      "tireSize": {
+        "width": "265",
+        "height": "70",
+        "radius": "17"
+      },
+      "tireSpeed": "Y",
+      "rating": "на сезон",
+      "tireOwner": "Шиномонтаж",
+      "id": "48cc"
+    },
+    {
+      "id": "22c6",
+      "tireModel": "ZE-340456",
+      "tireBrend": "Priellt",
+      "issueYear": "2016",
+      "clientPhone": "",
+      "counts": 7,
+      "inPrice": 1200,
+      "clientName": "",
+      "outPrice": 1500,
+      "tireNotes": "",
+      "loadIndex": "89",
+      "tireSize": {
+        "width": "265",
+        "height": "70",
+        "radius": "18"
+      },
+      "tireSpeed": "T",
+      "rating": "на сезон",
+      "tireOwner": "Шиномонтаж"
+    }
+  ],
+  "soldTires": [
+    {
+      "id": "295c",
+      "tireBrend": "Mklaren",
+      "tireModel": "Dupel",
+      "counts": 2,
+      "tireSize": {
+        "width": "165",
+        "height": "35",
+        "radius": "14"
+      },
+      "revenue": 400,
+      "outPrice": 5000,
+      "soldData": "2024-05-26"
     }
   ]
 }

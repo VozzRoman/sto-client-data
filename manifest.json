@@ -2,7 +2,7 @@
 	"name": "client-base",
 	"short_name": "client-base",
 	 "scope": "/",
-	"start_url": "http://localhost:5173/",
+	"start_url": "http://192.168.31.230:5173",
 	"display": "standalone",
 	"theme_color": "rgb(251, 146, 60)",
 	"background_color": "#ffffff",

@@ -1,11 +1,17 @@
 import { configureStore } from "@reduxjs/toolkit";
 import clientReducer from './clientSlice/clientSLice';
 import filterReducer from './filterSlice/filterSlice';
+import tireReducer from './tireStoreSlice/tireStoreSlice';
+import counterReducer from './counterSlice/counterSlice';
+import soldreducer from './soldSlice/soldSlice';
 import { combineReducers } from "redux";
 
 const rootReducer = combineReducers({
 clientReducer,
-filterReducer
+tireReducer,
+filterReducer,
+counterReducer,
+soldreducer,
 })
 
 

@@ -23,7 +23,7 @@ setCurrentRating(item);
       {[1, 2, 3, 4, 5].map((index) => (
         <span
           key={index}
-          className={`cursor-pointer text-[17px] ${
+          className={`cursor-pointer text-[17px] max-sm:text-[13px] ${
             index <= currentRating ? 'text-yellow-500' : 'text-gray-300'
           }`}
           onClick={() => handleClick(index)}

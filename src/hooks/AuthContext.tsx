@@ -19,7 +19,7 @@ export const useAuth = () => {
 };
 
 interface AuthProviderProps {
-  children: ReactNode;
+  children: ReactNode; 
 }
 
 export const AuthProvider: FC<AuthProviderProps> = ({ children }) => {

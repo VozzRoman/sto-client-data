@@ -1,99 +1,68 @@
 import { FC, useState } from 'react';
 import CLient from '../Client/CLient';
-import { useAppDispatch, useAppSelector } from '../../hooks/reduxHooks';
-import { CLientI } from '../../types/types';
+import { useAppSelector } from '../../hooks/reduxHooks';
 import InfoModal from '../InfoCardModal/InfoModal';
 import ClientCard from '../ClientCard/ClientCard';
-import { findByIdClient, removeClient } from '../../redux/operations';
 import UpdateClient from '../UpdateClient/UpdateClient';
 import AlertWindow from '../AlertWindow/AlertWindow';
-
-const getFilteredCOntacts = (inputData: string, listContact: CLientI[]) => {
-	const formattedInputData = inputData.trim().toLowerCase();
-  return listContact.filter(item => 
-	item.registrationNumber_1.toLocaleLowerCase().includes(formattedInputData) ||
-	item.registrationNumber_2.toLocaleLowerCase().includes(formattedInputData) ||
-	item.carModel_1.toLocaleLowerCase().includes(formattedInputData) ||
-	item.carModel_2.toLocaleLowerCase().includes(formattedInputData) ||
-	item.phone_1.toLocaleLowerCase().includes(formattedInputData) ||
-	item.phone_2.toLocaleLowerCase().includes(formattedInputData) ||
-	item.phone_3.toLocaleLowerCase().includes(formattedInputData) ||
-	item.name.toLocaleLowerCase().includes(formattedInputData)
-	);
-};
+////ClientsFulilter--------------------------
+import { getFilteredCOntacts } from '../../helpers/helpers';
+import useOpenModal from '../../hooks/useOpenModal';
+import useOpenEditModal from '../../hooks/useOpenEditModal';
+//-------------------------------------------
 
 const ClinetList:FC = () => {
 	const inputValue = useAppSelector(state => state.filterReducer.filter);
 	const clientData = useAppSelector(state => state.clientReducer.clients);
-
+	
 	const filteredClients = getFilteredCOntacts(inputValue, clientData);
-	const [isOpen, setIsOpen] = useState<boolean>(false);
-	const [isEditOpen, setIsEditOpen] = useState<boolean>(false);
+	//Хук открітие - модалка для карточек!
+	const {isOpen, handelModalClose, handelModalOpen} = useOpenModal();
+	//Хук открітие - модалка для  Edit(Update);
+	const {isEditOpen, handleUpdateModalClose, handleUpdateModalOpen} = useOpenEditModal();
 	const [isAlertOpen, setIsAlertOpen] = useState<boolean>(false);
 	const [clientId, setClientId] = useState<number | null>(null);
 
 
-	const dispatch = useAppDispatch();
-		//InfoModalOpen-----
-		const handelModalOpen = (value: number) => {
-			setIsOpen(true);
-			dispatch(findByIdClient(String(value)))	
-		}
-		const handelModalClose = () => {
-			setIsOpen(false);
-		}
-		//------------------
 		//AlertWindow
 		const handelAlertWindowOpen = (value: number) => {
-			dispatch(findByIdClient(String(value)))
 			setIsAlertOpen(true)
+			document.body.style.overflow = 'hidden';
 			setClientId(value);
 		}
 		const handleAlertWindowClose = () => {
 			setIsAlertOpen(false);
-		}
-		//------------------
-		//UpdateModalOpen--------
-		const handleUpdateModalOpen = (value: number) => {
-			setIsEditOpen(true);
-			dispatch(findByIdClient(String(value)))	
-		}
-		const handleUpdateModalClose = () => {
-			setIsEditOpen(false);
-		}
-		const handleDelte = (value: number) => {
-			console.log(value)
-			if (value!== undefined) {
-				dispatch(removeClient(String(value)));
-			 }
+			document.body.style.overflow = 'auto';
 		}
 
+
+
 	return (
-		<div className="table-box">
-		<table className="table">
-		<thead>
+		<div className="table-box w-full">
+		<table className="w-full">
+		<thead className='border-b-[1px] border-slate-300'>
 			<tr>
-			  <th scope="col">#</th>
-			  <th align="center" scope="col">Номер авто</th>
-			  <th scope="col">Назва авто</th>
-			  <th scope="col">Радіус</th>
-			  <th scope="col">Телефон</th>
-			  <th scope="col">Ім'я</th>
-			  <th scope="col">Як людина</th>
-			  <th scope="col"></th>
+			  <th className='pb-2 h-[33.5px]'>#</th>
+			  <th className='h-[33.5px] whitespace-nowrap max-sm:hidden visible' style={{textAlign: 'left'}}>Номер <span className='max-sm:hidden visible' >авто</span></th>
+			  <th className='visible max-md:hidden pl-3 pr-3' style={{textAlign: 'left'}}>Назва авто</th>
+			  <th className='visible max-md:hidden pl-3 pr-3' >Радіус</th>
+			  <th style={{textAlign: 'left'}}>Телефон</th>
+			  <th className='visible max-md:hidden pl-3 pr-3' style={{textAlign: 'left'}}>Ім'я</th>
+			  <th className='whitespace-nowrap' style={{textAlign: 'left'}}>Як людина</th>
+			  <th ></th>
 			</tr>
 		 </thead>
 		 <tbody className="">
 			{filteredClients.map((item, index) => {
 					return <CLient key={index} 
 					item={item} index={index} 
-					handleDelte={handleDelte} 
 					handelModalOpen={handelModalOpen} 
 					handleUpdateModalOpen={handleUpdateModalOpen} 
 					handelAlertWindowOpen={handelAlertWindowOpen}/>
 			})}
 		 </tbody>
 		</table>
+		
 		<InfoModal isOpen={isOpen} handelModalClose={handelModalClose}>
 			<ClientCard isOpen={isOpen} handelModalClose={handelModalClose} />
 		</InfoModal>
