@@ -5,13 +5,12 @@ import SearchForm from '../SearchFrom/SearchFrom';
 import Modal from '../Modal/Modal';
 import shinka from '../../assets/image/shina.png';
 import { GiCarWheel } from "react-icons/gi";
-import { useAuth } from '../../hooks/AuthContext';
 import Loader from '../Loader/Loader';
 
 const Layout:FC = () => {
 const [isOpen, setIsOpen] = useState<boolean>(false);
 const navigate = useNavigate();
-const {currentUser} = useAuth() ?? {};
+
 const onCLose = () => {
 	setIsOpen(false)
 	document.body.style.overflow = 'auto';
@@ -35,10 +34,10 @@ const handleButtonLink = () => {
 				<div className='flex relative items-center h-[60px] justify-between'>
 					<div className='flex items-center'>
 						<h1 className='text-white font-semibold mr-[30px] border-b-[1px] max-sm:hidden block whitespace-nowrap'><span className='text-[20px]'>К</span>лієнтська База</h1>
-			{currentUser && <button onClick={openModal} className='mr-[20px] max-sm:mr-[10px] w-[40px] text-white text-2xl h-[40px] bg-orange-400 hover:bg-orange-600 transition-colors duration-300 rounded-md' 
+			<button onClick={openModal} className='mr-[20px] max-sm:mr-[10px] w-[40px] text-white text-2xl h-[40px] bg-orange-400 hover:bg-orange-600 transition-colors duration-300 rounded-md' 
 			type='submit'>
 					+
-			</button>}
+			</button>
 			<button onClick={handleButtonLink} className='text-orange-400 hover:text-black transition-colors duration-300 ease-linear'>
 			<GiCarWheel size={42}/>
 			</button>

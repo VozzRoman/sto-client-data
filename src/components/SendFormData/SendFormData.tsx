@@ -12,6 +12,7 @@ import Loader from '../Loader/Loader';
 const SendFormData = () => {
 const isLoading = useAppSelector(state => state.clientReducer.isLoading);
 const [inputData, setInputData] = useState<InputDataI>({
+		whoAddClient:'',
 		registrationNumber_1:'',
 		registrationNumber_2:'',
 		carModel_1:'',
@@ -162,6 +163,7 @@ const handleServiceData_2 = (e: React.ChangeEvent<HTMLSelectElement>, index: num
 		setError('');
 		e.preventDefault();
 		const data = {
+			whoAddClient: inputData.whoAddClient,
 			registrationNumber_1: inputData.registrationNumber_1,
 			carModel_1: inputData.carModel_1,
 			tire_1: {
@@ -249,6 +251,7 @@ const handleServiceData_2 = (e: React.ChangeEvent<HTMLSelectElement>, index: num
 		}, 3000)
 		
 		setInputData({
+			whoAddClient:'',
 			registrationNumber_1:'',
 			registrationNumber_2:'',
 			carModel_1:'',
@@ -299,8 +302,13 @@ const handleServiceData_2 = (e: React.ChangeEvent<HTMLSelectElement>, index: num
 	
 	return (
 		<>
-			<h3 className='text-[20px] border-b-[1px] border-gray-400 mb-[10px] pb-2 text-orange-300 font-semibold'>Додати авто клієнта</h3>
-	
+		 <div className='flex justify-between border-b-[1px] border-gray-400 mb-[10px]'>
+			<h3 className='text-[20px] flex items-center text-orange-300 font-semibold'>Додати авто клієнта</h3>
+			<label className='block mb-1 mr-[30px]'>
+					<span className='block text-[15px] text-white'>Xто додав</span>
+					<input value={inputData.whoAddClient} onChange={handleOnChange} type="text" className={`w-full bg-gray-300 rounded-md pt-1 text-[14px] pb-1 pl-3 text-black border-[1px] `} name='whoAddClient'/>
+			</label>
+		</div>
 		<div className='max-md:h-[350px] max-md:overflow-y-auto'>
 		<form onSubmit={handleSubmit} className='text-white pb-5'>
 				<div>

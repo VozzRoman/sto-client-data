@@ -38,6 +38,10 @@ const ClinetList:FC = () => {
 
 
 	return (
+		<>
+		<div className='bg-slate-300 rounded-md pl-3 pr-3 pt-3 pb-3 mb-2 max-sm:pb-1 max-sm:pt-1 max-sm:pl-1'>
+		<p className="text-white p-[5px] pl-[10px] pr-[10px] inline-flex max-sm:items-center max-sm:pl-[5px] max-sm:pr-[5px] bg-opacity-35 rounded-md bg-slate-500 mr-3 max-sm:text-[14px]">Кількість: <span className="text-gray-800 ml-2 font-semibold text-[18px]">{clientData.length}</span></p>
+		</div>
 		<div className="table-box w-full">
 		<table className="w-full">
 		<thead className='border-b-[1px] border-slate-300'>
@@ -54,7 +58,7 @@ const ClinetList:FC = () => {
 		 </thead>
 		 <tbody className="">
 			{filteredClients.map((item, index) => {
-					return <CLient key={index} 
+					return <CLient key={item._id} 
 					item={item} index={index} 
 					handelModalOpen={handelModalOpen} 
 					handleUpdateModalOpen={handleUpdateModalOpen} 
@@ -73,6 +77,7 @@ const ClinetList:FC = () => {
 				<AlertWindow clientId={clientId!} handleAlertWindowClose={handleAlertWindowClose}/>
 		</InfoModal>
 	</div>
+	</>
 	);
 };
 

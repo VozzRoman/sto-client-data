@@ -6,7 +6,8 @@ export interface Tire {
  }
 
 export interface CLientI {
-	id?: number,
+	_id?: number,
+	whoAddClient: string,
 	registrationNumber_1: string,
 	registrationNumber_2: string,
 	tire_1: Tire,
@@ -35,6 +36,7 @@ export interface CLientI {
 
 export interface InputDataI {
 	[key: string]: string;
+	whoAddClient: string,
 	registrationNumber_1: string;
 	registrationNumber_2: string;
 	carModel_1: string;
@@ -69,7 +71,7 @@ export interface StokeInputData {
 }
 
 export interface TireStorageI extends StokeInputData {
-	id?: number
+	_id?: number
 	tireSize: Tire,
 	tireSpeed: string,
 	tireOwner: string,
@@ -80,7 +82,7 @@ export interface TireStorageI extends StokeInputData {
 //Sold
 
 export interface SoldStorageI {
-	id?: number,
+	_id?: number,
 	tireBrend: string,
 	tireModel: string,
 	tireSize: Tire,

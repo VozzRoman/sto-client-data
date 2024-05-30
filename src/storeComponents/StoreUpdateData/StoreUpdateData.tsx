@@ -108,7 +108,7 @@ setInputData(prev => {
 		tireSpeed: isSpeedIndex,
 		rating: isRating,
 		tireOwner: isOwner,
-		id: cuerrent?.id,
+		_id: cuerrent?._id,
 		dealDate: cuerrent?.dealDate
 		}
 
@@ -188,7 +188,7 @@ setInputData(prev => {
 			outPrice: '',
 			tireNotes: '',
 			loadIndex:'',
-			// dealDate:'',
+			
 		})
 
 	

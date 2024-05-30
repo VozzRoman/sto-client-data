@@ -38,10 +38,10 @@ const handleButtonLink = () => {
 				<div className='flex relative items-center h-[60px] justify-between'>
 					<div className='flex items-center'>
 						<h1 className='text-white font-semibold mr-[30px] border-b-[1px] max-sm:hidden block whitespace-nowrap'>Склад Колес</h1>
-			{currentUser && <button onClick={openModal} className='w-[40px] mr-[20px] max-sm:mr-[10px]  text-white text-2xl h-[40px] bg-orange-400 hover:bg-orange-600 transition-colors duration-300 rounded-md' 
+			<button onClick={openModal} className='w-[40px] mr-[20px] max-sm:mr-[10px]  text-white text-2xl h-[40px] bg-orange-400 hover:bg-orange-600 transition-colors duration-300 rounded-md' 
 			type='submit'>
 					+
-			</button>}
+			</button>
 			<button onClick={handleButtonLink} className='text-orange-400 mr-3 max-sm:mr-1 hover:text-white transition-colors duration-300 ease-linear'>
 			<FaUserCircle size={42}/>
 			</button>

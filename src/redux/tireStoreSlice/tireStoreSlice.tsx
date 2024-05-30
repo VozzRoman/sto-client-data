@@ -64,7 +64,7 @@ export const tireStoreSlice = createSlice({
 			})
 			.addCase(removeTire.fulfilled, (state, actions) => {
 				state.isLoading = false;
-				state.tires = state.tires.filter(item => item.id !== actions.payload.id);
+				state.tires = state.tires.filter(item => item._id !== actions.payload._id);
 				state.error = null;
 			})
 			.addCase(removeTire.rejected, (state, actions) => {
@@ -98,7 +98,7 @@ export const tireStoreSlice = createSlice({
 			console.log('Update', actions.payload);
 			state.isLoading = false;
 			state.tires = state.tires.map(item => {
-				if(item.id === actions.payload.id){
+				if(item._id === actions.payload._id){
 					return actions.payload;
 				}
 				return item;

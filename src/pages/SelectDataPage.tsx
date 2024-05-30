@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { FaUserAlt } from "react-icons/fa";
 import { GiCarWheel } from "react-icons/gi";
 import shinka from "../assets/image/shina.png";

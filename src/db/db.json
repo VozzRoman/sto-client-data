@@ -1093,6 +1093,50 @@
       },
       "serviceCar_1": [],
       "serviceCar_2": []
+    },
+    {
+      "id": "705b",
+      "whoAddClient": "Толик",
+      "registrationNumber_1": "",
+      "carModel_1": "Ford",
+      "tire_1": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "tire_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "registrationNumber_2": "",
+      "carModel_2": "",
+      "phone_1": "0957800059",
+      "phone_2": "",
+      "phone_3": "",
+      "name": "",
+      "discount": "",
+      "tiresValue": "",
+      "tiresValue_2": "",
+      "tiersIssueYears": "",
+      "dataStorage": "",
+      "endDataStorage": "",
+      "character": "",
+      "carFlaws": "",
+      "tireFlawStore": "",
+      "tireBrend": "",
+      "tireStorage": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "tireStorage_2": {
+        "width": "",
+        "height": "",
+        "radius": ""
+      },
+      "serviceCar_1": [],
+      "serviceCar_2": []
     }
   ],
   "tiresStore": [

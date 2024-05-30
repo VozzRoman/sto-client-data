@@ -62,7 +62,7 @@ const TiresList:FC = () => {
 		 </thead>
 		 <tbody className="">
 			{tireFiltered.map((item, index)=> (
-				<Tire key={item.id} item={item} index={index}
+				<Tire key={item._id} item={item} index={index}
 				handelModalOpen={handelModalOpen}
 				handleUpdateModalOpen={handleUpdateModalOpen}
 				handelAlertWindowOpen={handelAlertWindowOpen}/>

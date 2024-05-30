@@ -68,7 +68,7 @@ export const clientSLice = createSlice ({
 		})
 		.addCase(removeClient.fulfilled, (state, actions) => {
 			state.isLoading = false;
-			state.clients = state.clients.filter(item => item.id !== actions.payload.id);
+			state.clients = state.clients.filter(item => item._id !== actions.payload._id);
 	
 		})
 		.addCase(removeClient.rejected, (state, actions) => {
@@ -102,7 +102,7 @@ export const clientSLice = createSlice ({
 			console.log('Update', actions.payload);
 			state.isLoading = false;
 			state.clients = state.clients.map(item => {
-				if(item.id === actions.payload.id){
+				if(item._id === actions.payload._id){
 					return actions.payload;
 				}
 				return item;

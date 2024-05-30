@@ -44,6 +44,7 @@ const SoldTire = () => {
 			  <th style={{textAlign: 'left'}} className='visible max-md:hidden pl-3 pr-3'>Модель</th>
 			  <th className='visible max-md:hidden pl-3 pr-3'>Ш/В/Р</th>
 			  <th style={{textAlign: 'center'}} className='visible max-md:hidden pl-3 pr-3'>Кількість</th>
+			  <th style={{textAlign: 'center'}} className='visible max-md:hidden pl-3 pr-3'>Виторг</th>
 			  <th style={{textAlign: 'center'}} className='visible max-md:hidden whitespace-nowrap pl-2 pr-2'>Сума</th>
 			  <th style={{textAlign: 'left'}}>Дата</th>
 			  <th></th>
@@ -51,7 +52,7 @@ const SoldTire = () => {
 		 </thead>
 		 <tbody>
 			{soldStoreData.map((item, index)=> (
-				<SoldData handelAlertWindowOpen={handelAlertWindowOpen} key={item.id} item={item} index={index}
+				<SoldData handelAlertWindowOpen={handelAlertWindowOpen} key={item._id} item={item} index={index}
 				/>
 			))}
 

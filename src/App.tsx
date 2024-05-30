@@ -6,6 +6,7 @@ import { useAppDispatch } from './hooks/reduxHooks';
 import { fetchAllClients, fetchAllSoldTire, fetchAllTires } from './redux/operations';
 import { useAuth } from './hooks/AuthContext';
 import Loader from './components/Loader/Loader';
+import axios from 'axios';
 //----Suspens--------
 const SelectDataPage = lazy(() => import('./pages/SelectDataPage'));
 const LoginPage = lazy(() => import(('./pages/LoginPage')));
@@ -36,6 +37,14 @@ function App() {
    useEffect(() => {
 		dispatch(fetchAllSoldTire());
 	},[dispatch])
+
+	// useEffect(() => {
+	// 	const fetchData = async () => {
+	// 		const response = await axios.get('http://localhost:8080/api/soldTires');
+	// 		console.log(response);
+	// 	}
+	// 	fetchData();
+	// },[])
 	
   return (
 <>

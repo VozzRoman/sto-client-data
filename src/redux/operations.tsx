@@ -3,12 +3,13 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { CLientI, SoldStorageI, TireStorageI } from "../types/types";
 
-axios.defaults.baseURL = "http://192.168.31.230:5050/";
+axios.defaults.baseURL = "http://localhost:8080/api/";
 
 
 export const fetchAllClients = createAsyncThunk<CLientI[], undefined>('fetch/clients', async (_, thunkAPI) => {
 	try {
 		const response = await axios.get('/clients');
+		
 		return response.data;
 	} catch (error) {
 		if(error instanceof Error){
@@ -22,6 +23,7 @@ export const fetchAllClients = createAsyncThunk<CLientI[], undefined>('fetch/cli
 export const addClient = createAsyncThunk<CLientI, CLientI>('add/client', async (data, thunkAPI) => {
 	try {
 		const response = await axios.post('/clients', data);
+		
 		return response.data;
 	} catch (error) {
 		if(error instanceof Error){
@@ -72,7 +74,7 @@ export const searchClient = createAsyncThunk('search/client', async (query: stri
 
 export const updateClient = createAsyncThunk<CLientI, CLientI>('updateClient/client', async (data, thunkAPI) => {
 	try {
-		const response = await axios.put(`/clients/${data.id}`, data);
+		const response = await axios.put(`/clients/${data._id}`, data);
 		return response.data;
 	} catch (error) {
 		if(error instanceof Error){
@@ -88,6 +90,7 @@ export const updateClient = createAsyncThunk<CLientI, CLientI>('updateClient/cli
 export const fetchAllTires = createAsyncThunk<TireStorageI[], undefined>('fetch/tires', async (_, thunkAPI) => {
 	try {
 		const response = await axios.get('/tiresStore');
+		
 		return response.data;
 	} catch (error) {
 		if(error instanceof Error){
@@ -138,7 +141,7 @@ export const findByIdTire = createAsyncThunk<TireStorageI, string>('findById/tir
 
 export const updateTire = createAsyncThunk<TireStorageI, TireStorageI>('updateClient/tire', async (data, thunkAPI) => {
 	try {
-		const response = await axios.put(`/tiresStore/${data.id}`, data);
+		const response = await axios.put(`/tiresStore/${data._id}`, data);
 		return response.data;
 	} catch (error) {
 		if(error instanceof Error){
@@ -153,6 +156,7 @@ export const updateTire = createAsyncThunk<TireStorageI, TireStorageI>('updateCl
 export const fetchAllSoldTire = createAsyncThunk<SoldStorageI[], undefined>('fetch/soldTires', async (_, thunkAPI) => {
 	try {
 		const response = await axios.get('/soldTires');
+		console.log("RESPONSE", response);
 		return response.data;
 	} catch (error) {
 		if(error instanceof Error){

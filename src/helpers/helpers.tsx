@@ -3,16 +3,17 @@ import { CLientI, TireStorageI } from "../types/types";
 //ClientsFilter--------------------------
 export const getFilteredCOntacts = (inputData: string, listContact: CLientI[]) => {
 	const formattedInputData = inputData.trim().toLowerCase();
-	
+	console.log(listContact);
   return listContact.filter(item => 
-	item.registrationNumber_1.toLocaleLowerCase().includes(formattedInputData) ||
-	item.registrationNumber_2.toLocaleLowerCase().includes(formattedInputData) ||
-	item.carModel_1.toLocaleLowerCase().includes(formattedInputData) ||
-	item.carModel_2.toLocaleLowerCase().includes(formattedInputData) ||
-	item.phone_1.toLocaleLowerCase().includes(formattedInputData) ||
-	item.phone_2.toLocaleLowerCase().includes(formattedInputData) ||
-	item.phone_3.toLocaleLowerCase().includes(formattedInputData) ||
-	item.name.toLocaleLowerCase().includes(formattedInputData)
+	item.registrationNumber_1?.toLocaleLowerCase().includes(formattedInputData) ||
+	item.registrationNumber_2?.toLocaleLowerCase().includes(formattedInputData) ||
+	item.carModel_1?.toLocaleLowerCase().includes(formattedInputData) ||
+	item.carModel_2?.toLocaleLowerCase().includes(formattedInputData) ||
+	item.phone_1?.toLocaleLowerCase().includes(formattedInputData) ||
+	item.phone_2?.toLocaleLowerCase().includes(formattedInputData) ||
+	item.phone_3?.toLocaleLowerCase().includes(formattedInputData) ||
+	item.name?.toLocaleLowerCase().includes(formattedInputData) ||
+	item.whoAddClient?.toLocaleLowerCase().includes(formattedInputData)
 	);
 };
 

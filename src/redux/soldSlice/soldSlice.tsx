@@ -66,7 +66,7 @@ export const soldSLice = createSlice ({
 		})
 		.addCase(removeSoldTire.fulfilled, (state, actions) => {
 			state.isLoading = false;
-			state.soldTire = state.soldTire.filter(item => item.id !== actions.payload.id);
+			state.soldTire = state.soldTire.filter(item => item._id !== actions.payload._id);
 		})
 		.addCase(removeSoldTire.rejected, (state, actions) => {
 			state.isLoading = false;

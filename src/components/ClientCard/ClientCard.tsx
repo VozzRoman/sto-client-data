@@ -13,6 +13,7 @@ interface ClientCardlProp {
 
 const ClientCard:FC<ClientCardlProp> = ({isOpen, handelModalClose}) => {
 const clientInfo = useAppSelector(state => state.clientReducer.current);
+console.log(clientInfo);
 
 	return (
 		<div className={`
@@ -26,7 +27,13 @@ const clientInfo = useAppSelector(state => state.clientReducer.current);
 			<MdOutlineClose className='fill-orange-500 hover:fill-orange-400 transition:fill duration-300' 
 			size={25}/>
 		</button>
-		<h3 className='text-[20px] border-b-[1px] border-gray-400 mb-[10px] pb-2 text-orange-300 font-semibold'>Картка клієнта</h3>
+		<div className="flex justify-between border-b-[1px] border-gray-400 mb-[10px]">
+		<h3 className='text-[20px] flex items-center text-orange-300 font-semibold'>Картка клієнта</h3>
+		<label className='block mb-1 mr-[30px] flex'>
+					<span className='block text-[15px] text-white whitespace-nowrap mr-2'>Xто додав:</span>
+					<p className={`w-full font-semibold text-[14px] text-black mt-[1px] underline mr-2`}>{clientInfo?.whoAddClient}</p>
+			</label>
+		</div>
 		<div className="max-md:h-[400px] max-md:overflow-y-auto max-md:border-b-[2px]">
 			<div className='text-white'>
 				<div>
