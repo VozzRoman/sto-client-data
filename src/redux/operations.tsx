@@ -3,7 +3,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { CLientI, SoldStorageI, TireStorageI } from "../types/types";
 
-axios.defaults.baseURL = "http://localhost:8080/api/";
+axios.defaults.baseURL = "https://sto-backend-gw1y.onrender.com/api/";
 
 
 export const fetchAllClients = createAsyncThunk<CLientI[], undefined>('fetch/clients', async (_, thunkAPI) => {
@@ -59,18 +59,7 @@ export const findByIdClient = createAsyncThunk<CLientI, string>('findById/client
 	}
 })
 
-export const searchClient = createAsyncThunk('search/client', async (query: string, thunkAPI) => {
-	try {
-		const response = await axios.get(`/clients?registrationNumber_1=${query}`);
-		console.log("SearchResponse",response.data);
-		return response.data;
-	} catch (error) {
-		if(error instanceof Error){
-			return thunkAPI.rejectWithValue('rejectedRemove');
-		}
-		
-	}
-})
+
 
 export const updateClient = createAsyncThunk<CLientI, CLientI>('updateClient/client', async (data, thunkAPI) => {
 	try {
@@ -156,7 +145,6 @@ export const updateTire = createAsyncThunk<TireStorageI, TireStorageI>('updateCl
 export const fetchAllSoldTire = createAsyncThunk<SoldStorageI[], undefined>('fetch/soldTires', async (_, thunkAPI) => {
 	try {
 		const response = await axios.get('/soldTires');
-		console.log("RESPONSE", response);
 		return response.data;
 	} catch (error) {
 		if(error instanceof Error){

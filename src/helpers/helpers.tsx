@@ -3,7 +3,6 @@ import { CLientI, TireStorageI } from "../types/types";
 //ClientsFilter--------------------------
 export const getFilteredCOntacts = (inputData: string, listContact: CLientI[]) => {
 	const formattedInputData = inputData.trim().toLowerCase();
-	console.log(listContact);
   return listContact.filter(item => 
 	item.registrationNumber_1?.toLocaleLowerCase().includes(formattedInputData) ||
 	item.registrationNumber_2?.toLocaleLowerCase().includes(formattedInputData) ||

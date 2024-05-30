@@ -1,5 +1,4 @@
 import { FC, useState } from 'react';
-
 import { useAppDispatch, useAppSelector } from '../../hooks/reduxHooks';
 import { removeClient, removeSoldTire, removeTire } from '../../redux/operations';
 import Loader from '../Loader/Loader';

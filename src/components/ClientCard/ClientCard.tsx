@@ -13,7 +13,6 @@ interface ClientCardlProp {
 
 const ClientCard:FC<ClientCardlProp> = ({isOpen, handelModalClose}) => {
 const clientInfo = useAppSelector(state => state.clientReducer.current);
-console.log(clientInfo);
 
 	return (
 		<div className={`

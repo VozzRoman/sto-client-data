@@ -1,5 +1,5 @@
 import { FC, useState } from 'react';
-import { useAppDispatch, useAppSelector } from '../../hooks/reduxHooks';
+import { useAppSelector } from '../../hooks/reduxHooks';
 import Tire from '../Tire/Tire';
 import InfoModal from '../../components/InfoCardModal/InfoModal';
 import AlertWindow from '../../components/AlertWindow/AlertWindow';

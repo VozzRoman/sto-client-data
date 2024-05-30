@@ -1,5 +1,4 @@
 import { FC,  useState } from 'react';
-
 import { useAppDispatch } from '../../hooks/reduxHooks';
 import { filteredStoreValue } from '../../redux/filterSlice/filterSlice';
 import { selectOwner } from '../../selectedData/selectedData';
