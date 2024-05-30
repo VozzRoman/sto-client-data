@@ -1,8 +1,9 @@
-{
-	"name": "client-base",
+{	
+	"id": "/",
+	"name": "car-service",
 	"short_name": "client-base",
 	 "scope": "/",
-	"start_url": "https://wheels-car-service.netlify.app",
+	"start_url": "/",
 	"display": "standalone",
 	"theme_color": "rgb(251, 146, 60)",
 	"background_color": "#ffffff",
