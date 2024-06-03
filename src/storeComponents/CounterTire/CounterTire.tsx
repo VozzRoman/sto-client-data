@@ -4,6 +4,7 @@ import { counterTireRedux } from '../../redux/counterSlice/counterSlice';
 import { addSoldTire, updateTire } from '../../redux/operations';
 import { FaCirclePlus } from "react-icons/fa6";
 import { FaCircleMinus } from "react-icons/fa6";
+import Loader from '../../components/Loader/Loader';
 
 interface CounterTireProp {
 	handleModaClose: () => void
@@ -13,6 +14,8 @@ interface CounterTireProp {
 const CounterTire: FC<CounterTireProp> = ({handleModaClose}) => {
 	const [error, setError] = useState<string>('');
 	const [success, setSuccess] = useState<string>('');
+	const isLoading = useAppSelector(state => state.tireReducer.isLoading);
+
 const value = useAppSelector(state => state.counterReducer.counter);
 const dispatch = useAppDispatch();
 const cuerrent = useAppSelector(state => state.tireReducer.current);
@@ -77,6 +80,7 @@ const cuerrent = useAppSelector(state => state.tireReducer.current);
       <button onClick={handleMinus}><FaCircleMinus size={30}/></button>
     </div>
 	 <div>
+		{isLoading && <Loader/>}
 		<p className={`text-center max-sm:text-[16px] text-xl
 		${error ? 'text-red-300' : 'text-orange-300'}
 		`}>{error ? error : success}</p>

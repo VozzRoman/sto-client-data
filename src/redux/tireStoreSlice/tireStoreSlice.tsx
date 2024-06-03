@@ -48,7 +48,7 @@ export const tireStoreSlice = createSlice({
 		})
 		.addCase(addTire.fulfilled, (state, actions) => {
 			state.isLoading = false;
-			state.tires = [...state.tires, actions.payload];
+			state.tires = [actions.payload, ...state.tires];
 			state.error = null;
 		})
 		.addCase(addTire.rejected, (state, actions) => {

@@ -27,10 +27,10 @@ const clientInfo = useAppSelector(state => state.clientReducer.current);
 			size={25}/>
 		</button>
 		<div className="flex justify-between border-b-[1px] border-gray-400 mb-[10px]">
-		<h3 className='text-[20px] flex items-center text-orange-300 font-semibold'>Картка клієнта</h3>
-		<label className='block mb-1 mr-[30px] flex'>
-					<span className='block text-[15px] text-white whitespace-nowrap mr-2'>Xто додав:</span>
-					<p className={`w-full font-semibold text-[14px] text-black mt-[1px] underline mr-2`}>{clientInfo?.whoAddClient}</p>
+		<h3 className='text-[20px] flex items-center text-orange-300 font-semibold text-center'>Картка</h3>
+		<label className='block mr-[30px] flex'>
+					<span className='block text-[15px] text-white whitespace-nowrap mr-2 pt-1'>Xто додав:</span>
+					<p className={`w-full font-semibold text-[14px] text-black mt-[1px] underline mr-2 pt-1`}>{clientInfo?.whoAddClient}</p>
 			</label>
 		</div>
 		<div className="max-md:h-[400px] max-md:overflow-y-auto max-md:border-b-[2px]">
@@ -182,8 +182,8 @@ const clientInfo = useAppSelector(state => state.clientReducer.current);
 				{/* ---------------------------------Колеса під збнрігання-------------------------*/}
 				<div className='mb-[20px]'>
 				<h3 className='text-center text-[20px] border-b-[1px] border-gray-400 mb-[10px] pb-2 max-sm:text-[16px]'>Колеса під зберігання</h3>
-				{clientInfo?.dataStorage ? (<div className='flex max-[840px]:blcok flex-wrap bg-slate-800 bg-opacity-50 rounded-md p-5'>
-					<div className='w-[60%] max-[840px]: w-full'>
+				{clientInfo?.dataStorage ? (<div className='flex max-md:flex-wrap max-md:block bg-slate-800 bg-opacity-50 rounded-md p-5'>
+					<div className='w-[60%] max-md:w-full'>
 
 			
 			<div className='flex border-b-[1px] border-gray-300 border-opacity-10 mr-5'>
@@ -197,7 +197,7 @@ const clientInfo = useAppSelector(state => state.clientReducer.current);
 				</label>
 		 	</div>
 		
-					<div className='flex'>
+					<div className='flex max-md:block'>
 				<label className={`
 				${clientInfo.carModel_2 ? "mr-3" : "mr-[50px]"}
 				block w-1/2`}>
@@ -210,9 +210,9 @@ const clientInfo = useAppSelector(state => state.clientReducer.current);
 				</label>
 					</div>
 					</div>
-					<div className='w-1/2 max-[840px]:w-full'>
+					<div className='w-1/2 max-md:w-full'>
 				<label className='block mb-2 border-b-[1px] border-gray-300 border-opacity-10'>
-					<span className='block'>Кількість та радіус колес</span>
+					<span className='block mb-[5px]'>Кількість та радіус</span>
 					<div className='flex'>
 					<label className='block mr-5'>
 					<p className='rounded-md pb-1 text-black text-[18px] font-semibold'>{clientInfo?.tiresValue} шт.</p>
@@ -224,7 +224,7 @@ const clientInfo = useAppSelector(state => state.clientReducer.current);
 				</label>
 		
 				{clientInfo.tireStorage_2.width && <label className='block mb-2'>
-					<span className='block'>Кількість та радіус колес_2</span>
+					<span className='block'>Кількість та радіус_2</span>
 					 <div className='flex'>
 					 <label className='block mr-5'>
 					<p className='rounded-md pb-1 text-black text-[18px] font-semibold'>{clientInfo?.tiresValue_2} шт.</p>

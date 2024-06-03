@@ -49,10 +49,9 @@ export const clientSLice = createSlice ({
 			state.error = null;
 		})
 		.addCase(addClient.fulfilled, (state, actions) => {
-			console.log("act", actions.payload);
 			state.isLoading = false;
 			state.error = null;
-			state.clients = [...state.clients, actions.payload];
+			state.clients = [actions.payload, ...state.clients];
 	
 		})
 		.addCase(addClient.rejected, (state, actions) => {

@@ -4,6 +4,7 @@ import axios from "axios";
 import { CLientI, SoldStorageI, TireStorageI } from "../types/types";
 
 axios.defaults.baseURL = "https://sto-backend-gw1y.onrender.com/api/";
+// axios.defaults.baseURL = "/api";
 
 
 export const fetchAllClients = createAsyncThunk<CLientI[], undefined>('fetch/clients', async (_, thunkAPI) => {

@@ -1,0 +1,5 @@
+/api/clients/*    https://sto-backend-gw1y.onrender.com/api/clients/:splat   200
+/api/tiresStore/*   https://sto-backend-gw1y.onrender.com/api/tiresStore/:splat   200
+/api/soldTires/*    https://sto-backend-gw1y.onrender.com/api/soldTires/:splat   200
+
+/*    /index.html   200

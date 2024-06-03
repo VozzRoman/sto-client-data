@@ -50,7 +50,7 @@ export const soldSLice = createSlice ({
 			console.log("act", actions.payload);
 			state.isLoading = false;
 			state.error = null;
-			state.soldTire = [...state.soldTire, actions.payload];
+			state.soldTire = [actions.payload, ...state.soldTire];
 	
 		})
 		.addCase(addSoldTire.rejected, (state, actions) => {

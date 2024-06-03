@@ -7,6 +7,7 @@ import { fetchAllClients, fetchAllSoldTire, fetchAllTires } from './redux/operat
 import { useAuth } from './hooks/AuthContext';
 import Loader from './components/Loader/Loader';
 
+
 //----Suspens--------
 const SelectDataPage = lazy(() => import('./pages/SelectDataPage'));
 const LoginPage = lazy(() => import(('./pages/LoginPage')));
@@ -20,9 +21,13 @@ const SoldStorePage = lazy(() => import(('./pages/SoldStorePage')));
 
 
 function App() {
+
 //Регистрация
-	const {currentUser} = useAuth() ?? {};
+	const {currentUser } = useAuth() ?? {};
 	const dispatch = useAppDispatch();
+
+
+
 //Загрузка кілиенти
 	useEffect(() => {
 		dispatch(fetchAllClients());

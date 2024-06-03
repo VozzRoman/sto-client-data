@@ -15,6 +15,7 @@ interface StoreUpdateDataProp {
 
 const TireCard:FC<StoreUpdateDataProp> = ({handelModalClose, isOpen}) => {
 const cuerrent = useAppSelector(state => state.tireReducer.current);
+
 const [ updateDate, setUpdateDate] = useState<string>('');
 const [ownerStatus, setOwnerStatus] = useState<string>('');
 const {currentUser} = useAuth() ?? {};

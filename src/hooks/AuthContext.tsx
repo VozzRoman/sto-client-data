@@ -4,12 +4,15 @@ import { createUserWithEmailAndPassword, sendPasswordResetEmail , UserCredential
 import { auth } from '../firebase/firebase';
 import firebase from 'firebase/compat/app';
 
+
 interface AuthData {
   currentUser: firebase.User | null;
   signup: (email: string, password: string) => Promise<UserCredential>;
   login: (email: string, password: string) => Promise<UserCredential>;
   logout: () => Promise<void>;
   resetPassword: (email: string) => Promise<void>
+  getIdToken: () => Promise<string | null>;  // Добавленный метод
+ 
 }
 
 const AuthContext = createContext<AuthData | null>(null);
@@ -26,6 +29,9 @@ export const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
   const [currentUser, setCurrentUser] = useState<firebase.User | null>(null);
   const [refreshing, setRefreshing] = useState<boolean>(true);
 
+
+ 
+
   const signup = (email: string, password: string) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
@@ -40,6 +46,13 @@ export const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
 	return signOut(auth);
  };
 
+ const getIdToken = async () => {
+	if (currentUser) {
+	  return currentUser.getIdToken();
+	}
+	return null;
+ };
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
 		setRefreshing(false);
@@ -49,12 +62,17 @@ export const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
     return unsubscribe;
   }, []);
 
+
+
   const value: AuthData = {
     currentUser,
     signup,
 	 login,
 	 logout,
 	 resetPassword,
+	 getIdToken,
+	
+	 
 	 
 	 
   };

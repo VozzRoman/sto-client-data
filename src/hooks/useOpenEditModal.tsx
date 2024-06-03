@@ -4,6 +4,7 @@ import { findByIdClient, findByIdTire } from "../redux/operations";
 import { useLocation } from "react-router";
 
 
+
 const useOpenEditModal = () => {
 	const [isEditOpen, setIsEditOpen] = useState<boolean>(false);
 
@@ -17,6 +18,7 @@ const useOpenEditModal = () => {
 			return
 		}
 		if(pathname === "/tireStore"){
+			
 			dispatch(findByIdTire(String(value)))
 		}
 	}

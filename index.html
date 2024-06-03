@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+	 <link rel="icon" href="/favicon.ico" />
 	 <link rel="manifest" href="/manifest.json">
 	 <meta meta name="viewport" content="width=device-width, user-scalable=no" />
     <title>Client datas</title>
@@ -11,13 +12,6 @@
 	 <div id="modal"></div>
 	 <div id="infoModal"></div>
     <script type="module" src="/src/main.tsx"></script>
-	 <script>
-		if ('serviceWorker' in navigator) {
-		  window.addEventListener('load', () => {
-			 navigator.serviceWorker.register('/service-worker.js');
-		  });
-		}
-	  </script>
 
   </body>
 </html>
